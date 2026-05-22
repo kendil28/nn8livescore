@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Football Match Details - Pro-Sport Matrix</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Custom Tailwind Config -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sport-dark': '#0b0e11',
+            'sport-card': '#1a1d23',
+            'sport-accent': '#374151',
+            'sport-blue': '#2563eb',
+            'sport-rating': '#1e40af',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Style for fine-tuning -->
+<style data-purpose="custom-layout">
+    body {
+      background-color: #0b0e11;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .card-border {
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body class="p-4 flex flex-col gap-4">
+<!-- BEGIN: Match Header -->
+<section class="bg-sport-card rounded-2xl p-6 card-border" data-purpose="match-overview" id="match-header">
+<div class="flex items-center gap-2 mb-6">
+<img alt="Premier League Logo" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXcUoZsxPWIOSqweVLfkt05vMYWw5lEoUjgUGl1z3uSNdOn51CrATo6C9hg6rApfV99L1c8AZd-h_mR3aWPdqERvWVht1Lx1bYEv45guD1llhmx69YvjdTCe9hZA2poRmEA2TxOffF3ZITFXv2IR9n_DK2jR-lYJVNOm6kpw_Os6MBcEK7DkZCEFDfGSTq-mvq7d0UE-o_LY_vwuEKuiynE5g9SmHZWY2tnfgMdQpfiwOG6FQTMciRqd-9KuA9o5aQzWQoIY4ilPDX"/>
+<span class="text-sm font-semibold uppercase tracking-wider text-gray-400">Premier League</span>
+</div>
+<div class="flex justify-between items-center mb-6">
+<!-- Arsenal -->
+<div class="flex flex-col items-center gap-2 w-1/3">
+<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center p-2">
+<img alt="Arsenal Logo" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRhpmrqcVKPL-tZcmI9nHvtEXwn4MnW2hi8desbpNKkgfqidTuy-ZGRbokgZDcj5M1qFMnezW7X5i8er1N2X_k40zDR3GNPXO3UYkZDAHJPEHt8EtwpjkezORfNW05MuDAt1s6NaXvLuB04NJ2mh-rgNpK-3lGo-55kUzm-ujx_mKVhnx7AGATprSiGJe0DKGHAdf9Odci57OFLvwp4HumCKlMEp7wdYhWCp_neRvkjUnHCL1vI1FrL955e9aJdbUFT5YEXEEribVU"/>
+</div>
+<span class="font-bold text-lg">Arsenal</span>
+</div>
+<!-- Time/Countdown -->
+<div class="flex flex-col items-center w-1/3">
+<span class="text-3xl font-bold tracking-tighter">02:00</span>
+<span class="text-xs text-gray-400 mt-1">Tomorrow</span>
+<div class="mt-2 px-3 py-1 bg-white/10 rounded-md">
+<span class="text-sm font-mono font-medium">08:51:01</span>
+</div>
+</div>
+<!-- Burnley -->
+<div class="flex flex-col items-center gap-2 w-1/3">
+<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center p-2">
+<img alt="Burnley Logo" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFhvPMxyVb8uIMa-g0Vjz_gYWWcvfCsdA6yTHVPbmVsIUzwJWJtuiPGHc7qctPb2-sCRsYjQAScZKqs40AWmWDOQpy8--VizYQifYkfr5ZOy8Km4eA1WsI7PKZBuuCE9pbFaaC8fV_InEc903Zp6FnQNaXzpoVNgJPwHnmZC4xNkokvP73nHwgV34RkOIott0pvG-MpBIdAxhKRZVyhUzV4APN2Ny97CnSJUJx_A94qQf4M7F2r06ET28yRRqtzmmtuQG9NZQqG08b"/>
+</div>
+<span class="font-bold text-lg">Burnley</span>
+</div>
+</div>
+<!-- BEGIN: Voting Section -->
+<div class="mt-8 border-t border-white/5 pt-6">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h3 class="font-bold text-lg">Who will win?</h3>
+<p class="text-xs text-gray-500">Cast your vote!</p>
+</div>
+<div class="p-2 bg-white/5 rounded-lg">
+<svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="bg-white/5 hover:bg-white/10 py-3 rounded-xl flex justify-center items-center transition-all">
+<img alt="Arsenal" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb1bks4oI2Cq6mg7YMQt7ZVvcpU2Sty_HoHTRTfDUxo1Wsl4XX50E9URS058ICdKEPZrr1B6SUoJQTKrnh8Q1tadbqevtXecMtNTDutKYYWqfsQETotEDJmsIcEBTD9qNSZ9pS-1alSuZ7nzmxlwXcswgsn0-Vs3vduw8vh5oSnaEUIVIsKBL9YCZ_sPF9f_CK2ybH7351nbbrJ7L8wERbElF7SA-9zk4VIyHUqYrjyUMx2mZnZCnYZXj6TxybC-WPvt5GgGy1_8-m"/>
+</button>
+<button class="bg-white/5 hover:bg-white/10 py-3 rounded-xl flex justify-center items-center text-gray-400 font-bold transition-all">X</button>
+<button class="bg-white/5 hover:bg-white/10 py-3 rounded-xl flex justify-center items-center transition-all">
+<img alt="Burnley" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LRwyUku2wPCX1M-CF824eSJOScTyUPsyOrh5UgVhnC2DjO0T_1Z6K-LA2gYr0acGOJTnYILKt8017KsBHXBkZ6tMgVmoASiw07sHN96StfIuA8yc1oKqC7rilhna37--L4nCvfBW9GAh6iYdXPydqc4KHxIq81Q0hCWHzNCVA9W4bzTJdDSR3tbf5VLATfCGLO5Fp1Axe6iDm2howbGHs2x5tHEwKiQ7aGJzRAL8jxrurFLHmFeEasYtkcXhkDm0WWMlNVwExNKb"/>
+</button>
+</div>
+</div>
+<!-- END: Voting Section -->
+</section>
+<!-- END: Match Header -->
+<!-- BEGIN: Navigation Shortcuts -->
+<section class="grid grid-cols-2 gap-3" data-purpose="rankings-navigation">
+<div class="bg-sport-card p-4 rounded-xl flex items-center justify-between card-border">
+<div class="flex items-center gap-3">
+<span class="text-sport-blue font-black italic text-xl">FIFA</span>
+<span class="text-sm font-medium">FIFA Rankings</span>
+</div>
+<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="bg-sport-card p-4 rounded-xl flex items-center justify-between card-border">
+<div class="flex items-center gap-3">
+<img alt="UEFA" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlCD7gAPeQlhpt72VIEBHbZpLdbSiQPj7inna4_eneDjgxwj-kjx46QKP1fGSGHWa4PHzG1LKpCTdFxy_fYYScMuA8qciY3L6aDJgZUKKr-UDKIrgkWkUbhZFGjV_-UFIQVm-9g4oooclXpT_BzsNbpnTAM02ArJf9m3f1btIPMyJ_DD2SW6Ch4DRHcd7dJCZ6ascSiem_5N87ehJN898OW5rbHNXVxQ-K2b-Aijw-9RW89U-6BUuSuL_K5uM32iLQU4iNKI7Dt0lm"/>
+<span class="text-sm font-medium">UEFA Rankings</span>
+</div>
+<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</section>
+<!-- END: Navigation Shortcuts -->
+<!-- BEGIN: Featured Odds -->
+<section class="bg-sport-card rounded-2xl p-5 card-border" data-purpose="betting-odds">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Featured odds</h3>
+<div class="flex gap-10 text-[10px] font-bold text-gray-500 uppercase tracking-widest pr-4">
+<span>1</span>
+<span>X</span>
+<span>2</span>
+</div>
+</div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="text-[10px] text-red-500 font-bold uppercase">Live</span>
+<div class="flex flex-col">
+<span class="text-sm font-semibold">South Melbourne</span>
+<span class="text-sm font-semibold">Caroline Springs</span>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="bg-white/5 px-3 py-2 rounded flex items-center gap-1">
+<span class="text-sm font-bold">26.0</span>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[6px] border-b-green-500"></div>
+</div>
+<div class="bg-white/5 px-3 py-2 rounded flex items-center gap-1">
+<span class="text-sm font-bold">13.0</span>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[6px] border-b-green-500"></div>
+</div>
+<div class="bg-white/5 px-3 py-2 rounded flex items-center gap-1 border border-red-500/30">
+<span class="text-sm font-bold">1.04</span>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-red-500"></div>
+</div>
+</div>
+</div>
+<p class="text-[10px] text-gray-500 text-center mt-6">
+      Gamble responsibly 18+, www.gamblinghelponline.org.au
+    </p>
+</section>
+<!-- END: Featured Odds -->
+<!-- BEGIN: Top Performances -->
+<section class="bg-sport-card rounded-2xl p-5 card-border" data-purpose="player-stats">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Top performances</h3>
+<div class="text-gray-500">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Player 1 -->
+<div class="flex items-center gap-4 mb-6 relative">
+<span class="text-sm font-bold text-gray-500 w-4">1</span>
+<div class="relative">
+<img alt="Anis Hadj Moussa" class="w-12 h-12 rounded-full border-2 border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4mzGnqetn8-nT978rOYCegACgoMu3RvOaJK8G0vxsko6pDuLTRN56absr25qCQwktgiFFhdMj6cgCTNeGbL7bFYXmk-eBpIPKjD2QE2GaK9L16OD0kDIoKIiJzOzFxkgpSPS9lrtfIpLWP4jRgtT3v6cNoblg4UEgBnBJm1mezxBgGReJ6sLf6aaDfKaZTPfJuMpv5vHvcJW_ybgxnmaVWVmicHYDwS72KDnv_V5M-paNBwWciVDTUiNHvgmamf18DkAHjHvDUH1"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-red-600 rounded-full border border-sport-card flex items-center justify-center text-[8px] font-bold">1</div>
+</div>
+<div class="flex-grow">
+<h4 class="font-bold text-sm">Anis Hadj Moussa</h4>
+<span class="text-xs text-gray-500">Midfielder</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-xs font-bold text-gray-400">
+<svg class="w-3 h-3" fill="currentColor" viewbox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"></path></svg> 2
+        </div>
+<div class="flex items-center gap-2 bg-white/5 rounded-md px-2 py-1">
+<img class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3fZXuwKBfQl-tR3xiBaDPp4Szjryq_N2qKL5JIkPk0Yi6gLtpSqfHoWx-3Mb8g2sc8yMtN42fHpq1OjTcCgVt-CIZXeVlRKd7Z5UBmghk-DtGRDq-tbkid5F_Es6eZIqJ3VnMA30dlR_K7ottGWP6DKvkR8djQGXXOoUg3tTWrqcrTDpF_sagSePZV9ESzE9odPgxyxBRsDuEHjsjwq1-_oQk5ekAWtc1eNrf09x8MEMtd5MBfeMw2CDhGqxD7F-N4IybT5E0COv"/>
+<span class="text-xs font-bold">0 - 2</span>
+<img class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlIvtNiiBVXFQ_7lgyJRqxwa-C08stElevzCbgg3LXyMbXqyizImk3HqvINMpfl5hTCJ7zKG_5cI82G4fwxde8OZ2xbGvU9tuK3AnS5cQLH1ljkt9ZBnWoikBKpCLr64HqriglDljmnveb3epo-JMlXTs61mlmGhdO9F-EpQ6oEh4sSpDfOjMjyhXxnxJ3GsPO6OnQtwYhDm_4pKeqr0RPIQvjnWfiu07B87k8qZcS1WQkRhJNGcQAkpCbyYsI5sn62QhYYHo6_gd"/>
+</div>
+<div class="bg-sport-blue text-white font-bold text-sm px-2 py-1 rounded">10</div>
+</div>
+</div>
+<!-- Player 2 -->
+<div class="flex items-center gap-4 mb-6 relative">
+<span class="text-sm font-bold text-gray-500 w-4">2</span>
+<div class="relative">
+<img alt="Christos Tzolis" class="w-12 h-12 rounded-full border-2 border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf-jremjAoslFG0t0kbonu4Qi6-k5huHqsHBA5RpRh_Ft21WWqj8R0XjYlvPlW6I818rHJYGG5ABmDEO74jd3LnJqthgyoB183hhRsfijvUBm_xIBt2f_2nLcH9aJU1_J_2TAFWXdU9SxG3TcTGS52LVIqCWCRJeHyY_iE20P8_bSQ5ksoC0YRjpomkbRyf2L6kfZESQi06LNwBuBNl2YP6biy0EBgiO1jXeljC7pXu1vHmYViJRNaLs8wew2YQI9zV6nBSTHmj1q6"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-blue-600 rounded-full border border-sport-card flex items-center justify-center text-[8px] font-bold">2</div>
+</div>
+<div class="flex-grow">
+<h4 class="font-bold text-sm">Christos Tzolis</h4>
+<span class="text-xs text-gray-500">Midfielder</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-xs font-bold text-gray-400">
+<svg class="w-3 h-3" fill="currentColor" viewbox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16z"></path></svg> 3
+        </div>
+<div class="flex items-center gap-2 bg-white/5 rounded-md px-2 py-1">
+<img class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQHwRnVAeJeOPr53wBV0KheLrk_sTDfYzL4MylyPLvraSjUArp_Z4H8rOnBqzy0jMYz7NppIWWF_bFlHsH6YmLhQvJ81tJqEgeTF2B3q3dOaM95NVIfFeDiFbyE_cuKotaDTAth7kcZvgh6-w4EriZ0j99-mB2O4Ld22yi8Aah30LItu7mdzdE-kxSESg0kPdhjMz_cQPhJxAGPQ1ZAj9Mm2gtt4uOyDk-RkoYb9H21KeU7Tn8TRDui5MQQKg9N_x6dgn3TRhCeZYW"/>
+<span class="text-xs font-bold">5 - 0</span>
+<img class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeV-z7ndA2RCd0PMv2bq3Q30o6Kr7-g8EMDhGUn2FXaSBLR0XXl9KWQlebp-SQw6XEtt40_163BnVUwbRyjuyaG3kNaYZfHhwyfuaIVWT76a_vgzdF-LV4-x_joFOQW0azAGPCLHM-NO-DpH_JtqeoPum84jx1BdIVI9yFN1lSylSyTOSy4mywnFZ0612Yzud0EKS0Q_7_NG_LhxUvAqa7k6nUnHlCpirNHLlf5AKJUJv3akicqhi7joGj2yhtBT-DAKqzmOsUDzsm"/>
+</div>
+<div class="bg-sport-blue text-white font-bold text-sm px-2 py-1 rounded">10</div>
+</div>
+</div>
+<!-- Show More -->
+<button class="w-full flex items-center justify-center gap-2 text-sm font-semibold text-sport-blue py-2">
+      Show more 
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</section>
+<!-- END: Top Performances -->
+<!-- BEGIN: Promotional Banner -->
+<section class="bg-gradient-to-r from-sport-card to-[#2d1b31] rounded-2xl overflow-hidden card-border" data-purpose="promo">
+<div class="p-6 flex justify-between">
+<div class="flex flex-col max-w-[60%]">
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-pink-600 p-1 rounded">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM5.884 6.607a1 1 0 01-.226 1.396l-.867.65a1 1 0 11-1.2-1.6l.867-.65a1 1 0 011.42.204zm9.33.204a1 1 0 011.42-.204l.867.65a1 1 0 11-1.2 1.6l-.867-.65a1 1 0 01-.226-1.396zM7.5 16.5L12 21.5V11.5L7.5 16.5z"></path></svg>
+</div>
+<span class="font-bold text-xl italic tracking-tighter">Torneo</span>
+</div>
+<h4 class="font-bold text-lg leading-tight mb-4">Did you know your tournament can appear here, too?</h4>
+<ul class="text-xs text-gray-300 space-y-1 mb-6">
+<li>• Tournament planning tool</li>
+<li>• Visibility on Sofascore</li>
+</ul>
+<img class="w-20 h-20 rounded bg-white p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj9gSkaruI8XPIoPevdHH-uoi4zNmYTtdrnx7WnRfHB0QOWK6RO2ntZwvHaoOMKNMGYMq_c0ad8FE9jDkT12waMd54jB30wo1UMkkaRUvORyhSJqJY2zdjInXkCuq9pOSLSgTcEWw6KI_0Ac06NZ8h5LqBHdJMDP83aOBrKWdaYYCrAtVye-VuOCv57TuVGyWaIeLAxCdgOVt9TP20vl-Uw3CVkw5k3_6YgeciWl15vsuwSFDcwg9EBk3S3-aEBc5NCSv1de6drjH9"/>
+</div>
+<div class="relative w-1/3 -mr-2">
+<img class="rounded-t-xl border-t border-l border-white/20 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClpdxbiYAVKt_v9mZXa7T1JJJPlBpUQr3-mz2yAn47D0lBGvx1TPE2vlVQE1QSiJyl9QIdqnmYfilgb-SOo2KtoF7jRyq2uTAf3bN_4g9dVACGWwhrxD9H3qiKpPUwmQELfFqUScAxuINTX9zbi5ZtCrb3FMLzfHMEpOfi2VY0bzLZblcMa0ARMJfqDObCrY3_MFdZIrrSav-n8mra4z6y3vca5j5qXWxBACuqF1PuucGii4BOMMTWJZBGrR043ADSMdBqt9J9idSA"/>
+</div>
+</div>
+</section>
+<!-- END: Promotional Banner -->
+<!-- BEGIN: About Section -->
+<section class="mt-4 mb-8 px-4 text-center" data-purpose="about-service">
+<h3 class="text-lg font-bold mb-4">About</h3>
+<p class="text-sm text-gray-400 leading-relaxed text-left">
+      The live football results page on Sofascore delivers real-time football scores for all ongoing matches. Sofascore provides comprehensive coverage of hundreds of football leagues, cups, and tournaments, offering live updated results, statistics, league tables, video highlights, and fixtures. From the most popular football leagues — 
+      <a class="text-sport-blue hover:underline" href="#">UEFA Champions League</a>, 
+      <a class="text-sport-blue hover:underline" href="#">UEFA Europa League</a>, 
+      <a class="text-sport-blue hover:underline" href="#">Premier League</a>, 
+      <a class="text-sport-blue hover:underline" href="#">LaLiga</a>, 
+      <a class="text-sport-blue hover:underline" href="#">Bundesliga</a>, 
+      <a class="text-sport-blue hover:underline" href="#">Serie A</a>, 
+      <a class="text-sport-blue hover:underline" href="#">Ligue 1</a>, and 
+      <a class="text-sport-blue hover:underline" href="#">Brasileirão Série A</a> 
+      — to top player ratings, match statistics, and all football matches played today, our football live score page has everything you need. For even more advanced sports analysis, check out our new 
+      <a class="text-sport-blue hover:underline" href="#">player comparison tool</a> 
+      to compare your favourite players side-by-side.
+    </p>
+</section>
+<!-- END: About Section -->
+</body></html>

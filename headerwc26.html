@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIFA World Cup 2026 Header</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131316",
+            "surface-container-high": "#2a2a2d",
+            "surface-container": "#1f1f22",
+            "on-surface": "#e4e1e5",
+            "on-surface-variant": "#c5c5d9",
+            "text-secondary": "#98989E",
+            "outline": "#8f8fa2",
+            "outline-variant": "#444656",
+          },
+          fontFamily: {
+            sans: ["Hanken Grotesk", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .header-container {
+      background-color: #060606;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    /* Precise background glow effect based on IMAGE_15 */
+    .glow-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 10% 100%, rgba(220, 38, 38, 0.45) 0%, transparent 45%),
+                  radial-gradient(circle at 45% 100%, rgba(20, 83, 45, 0.45) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 100%, rgba(30, 58, 138, 0.4) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 90%, rgba(133, 77, 14, 0.4) 0%, transparent 40%),
+                  radial-gradient(circle at 95% 100%, rgba(88, 28, 135, 0.35) 0%, transparent 35%);
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .content-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .timeline-dot {
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+      position: relative;
+    }
+    .timeline-dot.active {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body class="bg-[#0e0e11] p-4 flex justify-center items-start min-h-screen">
+<!-- Main Header -->
+<header class="header-container w-full max-w-[1026px] text-white shadow-2xl p-4 md:p-6" data-purpose="fifa-header">
+<div class="glow-overlay"></div>
+<div class="content-wrapper flex flex-col gap-6">
+<!-- Top Branding & Favourite Row -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-4 md:gap-8">
+<!-- FIFA Trophy Image -->
+<div class="flex-shrink-0 w-[50px] md:w-[60px]">
+<img alt="FIFA Trophy" class="h-16 md:h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj56OeUtAbb2nbM4pNdfx81bFN11miZnnb6Dgwn1eCn3Yp4HNDrThGWd33ItT7p3XnfxfJygMLY1ZglKFg54yS0l-JDHtVaEPdQTE33ASSdBoic5dUW7nKE7kpP9ZD4r9-kxugmMsSICo8oBqL6TTU92anLfHSeOTSG4HvD4vDrziNTpWSj3CheG4V2REpI5HE_gLgb85A2itAnrqt7HSrMO0pnVlky2GGOiFIBW5d9jcha-Kp7kUuGfXcFzKMQrKZjtspM-R0994"/>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4">
+<h1 class="text-2xl md:text-[32px] font-bold tracking-tight">FIFA World Cup 2026</h1>
+<span class="text-[#98989E] text-sm font-medium">755k followers</span>
+</div>
+<!-- Year Selector -->
+<div class="relative flex items-center max-w-[calc(100vw-120px)] md:max-w-none">
+<div class="flex overflow-x-auto no-scrollbar space-x-2 py-1 pr-12">
+<!-- Active Year -->
+<button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold flex-shrink-0">2026</button>
+<!-- Inactive Years -->
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2022</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2018</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2014</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2010</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2006</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2002</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1998</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1994</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1990</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1986</button>
+</div>
+<!-- Scroll Arrow -->
+<button class="absolute right-0 bg-white text-black h-8 w-8 flex items-center justify-center rounded-lg shadow-lg">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Favourite Button -->
+<button class="flex-shrink-0 bg-white text-black px-3 py-2 rounded-md flex items-center gap-2 font-bold text-[13px] tracking-wide transition hover:bg-gray-100 uppercase">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="hidden sm:inline">Favourite</span>
+</button>
+</div>
+<!-- Tournament Progress Timeline -->
+<div class="mt-4 md:mt-8 px-1" data-purpose="tournament-timeline">
+<div class="relative h-px bg-white/20 w-full mb-3">
+<div class="absolute top-1/2 left-0 right-0 h-[1.5px] bg-white/20 -translate-y-1/2"></div>
+<div class="relative flex justify-between items-center -translate-y-1/2">
+<!-- Group Stage -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot active"></div>
+</div>
+<!-- R32 -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot"></div>
+</div>
+<!-- R16 -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot"></div>
+</div>
+<!-- QF -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot"></div>
+</div>
+<!-- SF -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot"></div>
+</div>
+<!-- 3rd -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot"></div>
+</div>
+<!-- Final -->
+<div class="flex flex-col items-center">
+<div class="timeline-dot"></div>
+</div>
+</div>
+</div>
+<!-- Stage Labels -->
+<div class="flex justify-between text-[11px] md:text-[13px] font-bold text-white uppercase">
+<div class="w-1/7">Group stage</div>
+<div class="w-1/7 text-center translate-x-[15%]">R32</div>
+<div class="w-1/7 text-center translate-x-[20%]">R16</div>
+<div class="w-1/7 text-center translate-x-[25%]">QF</div>
+<div class="w-1/7 text-center translate-x-[30%]">SF</div>
+<div class="w-1/7 text-center translate-x-[15%]">3rd</div>
+<div class="w-1/7 text-right">Final</div>
+</div>
+</div>
+</div>
+</header>
+</body></html>

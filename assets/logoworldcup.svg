@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Trophy Base -->
+  <path d="M8 20h8v2H8z" fill="url(#goldGradient)"/>
+  <path d="M7 18h10v2H7z" fill="url(#goldGradient)"/>
+  
+  <!-- Trophy Cup -->
+  <path d="M6 3h12v2H6z" fill="url(#goldGradient)"/>
+  <path d="M7 5h10l-1 10c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2L7 5z" fill="url(#goldGradient)"/>
+  
+  <!-- Trophy Handles -->
+  <path d="M5 5H3c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2V5z" fill="url(#goldGradient)" opacity="0.8"/>
+  <path d="M19 5h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-2V5z" fill="url(#goldGradient)" opacity="0.8"/>
+  
+  <!-- Soccer Ball Pattern -->
+  <circle cx="12" cy="10" r="2.5" fill="#FFFFFF" opacity="0.3"/>
+  <path d="M12 8l.8 2.4h2.5l-2 1.5.8 2.4-2-1.5-2 1.5.8-2.4-2-1.5h2.5z" fill="#FFFFFF" opacity="0.5" transform="scale(0.4) translate(18, 12)"/>
+</svg>

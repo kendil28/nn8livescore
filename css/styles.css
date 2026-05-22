@@ -1,0 +1,137 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Material Icons */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-size: 20px;
+}
+
+/* Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #131313;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #424754;
+    border-radius: 2px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Navigation Styles */
+.nav-item-active {
+    color: #aec6ff !important;
+    border-bottom-color: #aec6ff !important;
+}
+
+.sidebar-item-active {
+    background-color: #5672fe !important;
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    top: calc(100% + 8px) !important;
+    background-color: #ff0000 !important;
+    border: 5px solid #00ff00 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.9), 0 10px 10px -5px rgba(0, 0, 0, 0.8) !important;
+    z-index: 99999 !important;
+    min-width: 220px !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    display: none !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.3s ease !important;
+    pointer-events: none !important;
+}
+
+.dropdown-menu.show {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+.dropdown-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 0.5rem !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    background-color: #ff0000 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #cc0000 !important;
+    color: #ffffff !important;
+}
+
+/* Dark/Light Mode Gradient Backgrounds */
+html.dark body {
+    background: linear-gradient(135deg, #000000 0%, #151932 100%);
+}
+
+html:not(.dark) body {
+    background: linear-gradient(135deg, #f0f0f0 0%, #4d586d 100%);
+
+}
+
+html:not(.dark) header .text-on-surface,
+html:not(.dark) header .text-on-surface-variant {
+    color: #1a1a1a !important;
+}
+
+/* Light Mode Dropdown */
+html:not(.dark) .dropdown-menu {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+}
+
+html:not(.dark) .dropdown-item {
+    color: #374151;
+}
+
+html:not(.dark) .dropdown-item:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* Pulse Animation for Live Indicator */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
