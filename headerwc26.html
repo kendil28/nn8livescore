@@ -72,6 +72,20 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+    /* Custom scrollbar styling */
+    .overflow-x-auto::-webkit-scrollbar {
+      height: 6px;
+    }
+    .overflow-x-auto::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .overflow-x-auto::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 2px;
+    }
+    .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
     .timeline-dot {
       width: 8px;
       height: 8px;
@@ -94,7 +108,7 @@
 <div class="flex items-start gap-4 md:gap-8">
 <!-- FIFA Trophy Image -->
 <div class="flex-shrink-0 w-[50px] md:w-[60px]">
-<img alt="FIFA Trophy" class="h-16 md:h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj56OeUtAbb2nbM4pNdfx81bFN11miZnnb6Dgwn1eCn3Yp4HNDrThGWd33ItT7p3XnfxfJygMLY1ZglKFg54yS0l-JDHtVaEPdQTE33ASSdBoic5dUW7nKE7kpP9ZD4r9-kxugmMsSICo8oBqL6TTU92anLfHSeOTSG4HvD4vDrziNTpWSj3CheG4V2REpI5HE_gLgb85A2itAnrqt7HSrMO0pnVlky2GGOiFIBW5d9jcha-Kp7kUuGfXcFzKMQrKZjtspM-R0994"/>
+<img alt="FIFA Trophy" class="h-16 md:h-24 w-auto object-contain" src="worldcup.png"/>
 </div>
 <div class="flex flex-col gap-3">
 <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4">
@@ -102,8 +116,9 @@
 <span class="text-[#98989E] text-sm font-medium">755k followers</span>
 </div>
 <!-- Year Selector -->
-<div class="relative flex items-center max-w-[calc(100vw-120px)] md:max-w-none">
-<div class="flex overflow-x-auto no-scrollbar space-x-2 py-1 pr-12">
+<div class="relative flex items-start max-w-[calc(100vw-120px)] md:max-w-[1100px]">
+<div class="flex-1 relative">
+<div class="flex overflow-x-auto space-x-2 py-1 pr-12 pb-5 no-scrollbar" id="year-selector-container">
 <!-- Active Year -->
 <button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold flex-shrink-0">2026</button>
 <!-- Inactive Years -->
@@ -117,6 +132,23 @@
 <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1994</button>
 <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1990</button>
 <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1986</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1982</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1978</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1974</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1970</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1966</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1962</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1958</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1954</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1950</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1938</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1934</button>
+<button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1930</button>
+</div>
+<!-- Custom Scrollbar -->
+<div class="custom-scrollbar-track absolute bottom-0 left-0 right-0 h-2 bg-white/10 rounded-full cursor-pointer" id="custom-scrollbar-track">
+<div class="custom-scrollbar-thumb absolute h-full bg-white/40 rounded-full cursor-grab active:cursor-grabbing hover:bg-white/60 transition-colors" id="custom-scrollbar-thumb" style="width: 30px;"></div>
+</div>
 </div>
 <!-- Scroll Arrow -->
 <button class="absolute right-0 bg-white text-black h-8 w-8 flex items-center justify-center rounded-lg shadow-lg">
@@ -179,4 +211,84 @@
 </div>
 </div>
 </header>
+<script>
+// Custom Scrollbar Functionality
+const container = document.getElementById('year-selector-container');
+const track = document.getElementById('custom-scrollbar-track');
+const thumb = document.getElementById('custom-scrollbar-thumb');
+
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+// Update thumb position based on scroll
+function updateThumbPosition() {
+    const scrollRatio = container.scrollLeft / (container.scrollWidth - container.clientWidth);
+    const trackWidth = track.clientWidth;
+    const thumbWidth = thumb.clientWidth;
+    const maxThumbPosition = trackWidth - thumbWidth;
+    const thumbPosition = scrollRatio * maxThumbPosition;
+    thumb.style.left = thumbPosition + 'px';
+}
+
+// Initial update
+container.addEventListener('load', updateThumbPosition);
+window.addEventListener('load', updateThumbPosition);
+container.addEventListener('scroll', updateThumbPosition);
+window.addEventListener('resize', updateThumbPosition);
+
+// Drag functionality
+thumb.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - thumb.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    thumb.classList.add('active:cursor-grabbing');
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - track.getBoundingClientRect().left;
+    const trackWidth = track.clientWidth;
+    const thumbWidth = thumb.clientWidth;
+    const maxThumbPosition = trackWidth - thumbWidth;
+    let thumbPosition = x - startX;
+    
+    // Clamp thumb position
+    if (thumbPosition < 0) thumbPosition = 0;
+    if (thumbPosition > maxThumbPosition) thumbPosition = maxThumbPosition;
+    
+    thumb.style.left = thumbPosition + 'px';
+    
+    // Update scroll position
+    const scrollRatio = thumbPosition / maxThumbPosition;
+    container.scrollLeft = scrollRatio * (container.scrollWidth - container.clientWidth);
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    thumb.classList.remove('active:cursor-grabbing');
+});
+
+// Track click to jump
+track.addEventListener('click', (e) => {
+    if (e.target === thumb) return;
+    const x = e.pageX - track.getBoundingClientRect().left;
+    const trackWidth = track.clientWidth;
+    const thumbWidth = thumb.clientWidth;
+    const maxThumbPosition = trackWidth - thumbWidth;
+    const thumbPosition = x - (thumbWidth / 2);
+    
+    // Clamp thumb position
+    let clampedPosition = thumbPosition;
+    if (clampedPosition < 0) clampedPosition = 0;
+    if (clampedPosition > maxThumbPosition) clampedPosition = maxThumbPosition;
+    
+    thumb.style.left = clampedPosition + 'px';
+    
+    // Update scroll position
+    const scrollRatio = clampedPosition / maxThumbPosition;
+    container.scrollLeft = scrollRatio * (container.scrollWidth - container.clientWidth);
+});
+</script>
 </body></html>
