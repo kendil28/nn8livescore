@@ -126,20 +126,6 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #424754; border-radius: 2px; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        /* Custom scrollbar styling */
-        .overflow-x-auto::-webkit-scrollbar {
-          height: 6px;
-        }
-        .overflow-x-auto::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.1);
-        }
-        .overflow-x-auto::-webkit-scrollbar-thumb {
-          background: rgba(255, 255, 255, 0.4);
-          border-radius: 2px;
-        }
-        .overflow-x-auto::-webkit-scrollbar-thumb:hover {
-          background: rgba(255, 255, 255, 0.6);
-        }
         
         /* Navigation Bar Styles */
         .nav-item {
@@ -313,7 +299,7 @@
             background-color: #fafbfc !important;
         }
         html:not(.dark) .bg-surface-container-low {
-            background-color: #c1cfff !important;
+            background-color: #e5e7eb !important;
         }
         html:not(.dark) .bg-surface {
             background-color: #76a7d8 !important;
@@ -746,8 +732,6 @@
                         <img src="assets/icons/search.webp" alt="Search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"/>
                     </div>
                 </div>
-
-
                 
                 <!-- Right Side -->
                 <div class="flex items-center gap-2 md:gap-stack-md">
@@ -1721,7 +1705,7 @@
                 <img src="assets/icons/Olympic_Games.webp" alt="WC26" class="w-5 h-5 flex-shrink-0"/>
                 <span class="sidebar-text text-xs font-bold whitespace-nowrap">WC26</span>
             </a>
-            <a class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high text-primary" href="javascript:void(0)" id="mobile-football-nav-btn">
+            <a class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high text-primary" href="javascript:void(0)">
                 <img src="assets/icons/Football.webp" alt="Football" class="w-5 h-5 flex-shrink-0"/>
                 <span class="sidebar-text text-xs font-bold whitespace-nowrap">Football</span>
             </a>
@@ -1882,7 +1866,7 @@
                 <div class="relative z-10 flex flex-col gap-6">
                     <div class="flex items-start justify-between">
                         <div class="flex items-start gap-8">
-                            <img alt="FIFA Trophy" class="h-24 w-auto object-contain" src="worldcup.png"/>
+                            <img alt="FIFA Trophy" class="h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj56OeUtAbb2nbM4pNdfx81bFN11miZnnb6Dgwn1eCn3Yp4HNDrThGWd33ItT7p3XnfxfJygMLY1ZglKFg54yS0l-JDHtVaEPdQTE33ASSdBoic5dUW7nKE7kpP9ZD4r9-kxugmMsSICo8oBqL6TTU92anLfHSeOTSG4HvD4vDrziNTpWSj3CheG4V2REpI5HE_gLgb85A2itAnrqt7HSrMO0pnVlky2GGOiFIBW5d9jcha-Kp7kUuGfXcFzKMQrKZjtspM-R0994"/>
                             <div class="flex flex-col gap-3">
                                 <div class="flex flex-col md:flex-row md:items-baseline gap-4">
                                     <h1 class="text-[32px] font-bold tracking-tight">FIFA World Cup 2026</h1>
@@ -1896,36 +1880,15 @@
                                         <span class="text-primary font-bold">11 Jun - 19 Jul</span>
                                     </div>
                                 </div>
-                                <div class="flex-1 relative">
-                                    <div class="flex overflow-x-auto space-x-2 py-1 max-w-[1100px] pb-5 no-scrollbar" id="year-selector-container">
-                                        <button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold flex-shrink-0">2026</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2022</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2018</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2014</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2010</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2006</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2002</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1998</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1994</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1990</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1986</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1982</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1978</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1974</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1970</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1966</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1962</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1958</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1954</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1950</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1938</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1934</button>
-                                        <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1930</button>
-                                    </div>
-                                    <!-- Custom Scrollbar -->
-                                    <div class="custom-scrollbar-track absolute bottom-0 left-0 right-0 h-2 bg-white/10 rounded-full cursor-pointer" id="custom-scrollbar-track">
-                                        <div class="custom-scrollbar-thumb absolute h-full bg-white/40 rounded-full cursor-grab active:cursor-grabbing hover:bg-white/60 transition-colors" id="custom-scrollbar-thumb" style="width: 30px;"></div>
-                                    </div>
+                                <div class="flex overflow-x-auto no-scrollbar space-x-2 py-1">
+                                    <button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold flex-shrink-0">2026</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2022</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2018</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2014</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2010</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2006</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">2002</button>
+                                    <button class="bg-[#1f1f22]/80 hover:bg-[#2a2a2d] text-[#e4e1e5] px-4 py-1.5 rounded-full text-sm font-medium flex-shrink-0">1998</button>
                                 </div>
                             </div>
                         </div>
@@ -1969,22 +1932,22 @@
                     <!-- Top Filter Bar -->
                     <div class="flex flex-wrap items-center justify-between p-3 md:p-4 border-b border-outline-variant gap-3">
                         <div class="flex gap-4 md:gap-6 text-[11px] md:text-xs font-bold overflow-x-auto no-scrollbar">
-                            <span class="text-primary border-b-2 border-primary pb-1 cursor-pointer whitespace-nowrap" id="filter-all">All</span>
-                            <span class="text-on-surface-variant cursor-pointer hover:text-primary transition-colors whitespace-nowrap" id="filter-fav">Favourites</span>
-                            <span class="text-on-surface-variant cursor-pointer hover:text-primary transition-colors whitespace-nowrap" id="filter-comp">Competitions</span>
+                            <span class="text-primary border-b-2 border-primary pb-1 cursor-pointer whitespace-nowrap">All</span>
+                            <span class="text-on-surface-variant cursor-pointer hover:text-primary transition-colors whitespace-nowrap">Favourites</span>
+                            <span class="text-on-surface-variant cursor-pointer hover:text-primary transition-colors whitespace-nowrap">Competitions</span>
                         </div>
                         <div class="flex items-center bg-surface-container rounded-full px-2 py-1 md:px-3 md:py-1.5 gap-1 md:gap-2 border border-outline-variant shrink-0">
                             <span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer">chevron_left</span>
-                            <span class="text-[11px] md:text-xs font-bold text-primary" id="current-date-label">Today</span>
+                            <span class="text-[11px] md:text-xs font-bold text-primary">Today</span>
                             <span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer">chevron_right</span>
                         </div>
                     </div>
                     <!-- Status Segments & Odds -->
                     <div class="flex flex-wrap items-center justify-between p-3 md:p-4 border-b border-outline-variant gap-3">
-                        <div class="flex bg-surface-container rounded-full p-1 gap-0.5 md:gap-1 overflow-x-auto no-scrollbar" id="status-filter-container">
-                            <button class="status-filter-btn px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-xs font-semibold bg-primary text-on-primary whitespace-nowrap" data-status="Live">Live (2)</button>
-                            <button class="status-filter-btn px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-xs font-semibold text-on-surface-variant hover:bg-surface-variant/30 transition-colors whitespace-nowrap" data-status="Finished">Finished</button>
-                            <button class="status-filter-btn px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-xs font-semibold text-on-surface-variant hover:bg-surface-variant/30 transition-colors whitespace-nowrap" data-status="Upcoming">Upcoming</button>
+                        <div class="flex bg-surface-container rounded-full p-1 gap-0.5 md:gap-1 overflow-x-auto no-scrollbar">
+                            <button class="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-xs font-semibold bg-primary text-on-primary whitespace-nowrap">Live (2)</button>
+                            <button class="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-xs font-semibold text-on-surface-variant hover:bg-surface-variant/30 transition-colors whitespace-nowrap">Finished</button>
+                            <button class="px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-xs font-semibold text-on-surface-variant hover:bg-surface-variant/30 transition-colors whitespace-nowrap">Upcoming</button>
                         </div>
                         <div class="flex items-center gap-2 shrink-0 ml-auto">
                             <span class="text-[11px] md:text-xs font-bold text-on-surface">Odds</span>
@@ -2595,7 +2558,7 @@
                         <p class="text-[11px] font-medium leading-tight">Explore videos, news, facts, and more from this tournament.</p>
                         <button class="px-4 py-1.5 bg-primary text-on-primary text-[10px] font-bold rounded-full uppercase tracking-widest mt-2">View media</button>
                     </div>
-                    <img src="worldcup.png" alt="Trophy" class="h-16 w-auto object-contain opacity-50"/>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj56OeUtAbb2nbM4pNdfx81bFN11miZnnb6Dgwn1eCn3Yp4HNDrThGWd33ItT7p3XnfxfJygMLY1ZglKFg54yS0l-JDHtVaEPdQTE33ASSdBoic5dUW7nKE7kpP9ZD4r9-kxugmMsSICo8oBqL6TTU92anLfHSeOTSG4HvD4vDrziNTpWSj3CheG4V2REpI5HE_gLgb85A2itAnrqt7HSrMO0pnVlky2GGOiFIBW5d9jcha-Kp7kUuGfXcFzKMQrKZjtspM-R0994" alt="Trophy" class="h-16 w-auto object-contain opacity-50"/>
                 </div>
 
                 <!-- Analyst Promo -->
@@ -2617,7 +2580,7 @@
         <!-- Right Sidebar: Match Detail (Middle Column) -->
         <aside id="desktop-match-detail" class="lg:col-start-2 hidden lg:flex flex-col sticky top-[120px] h-fit w-full shrink-0">
             <!-- Container for Match Detail (with background) -->
-            <div id="match-detail-view" style="display: flex;" class="bg-surface-container-low rounded-xl border border-outline-variant flex flex-col shiny-panel shiny-panel-delay-2">
+            <div id="match-detail-view" style="display: none;" class="bg-surface-container-low rounded-xl border border-outline-variant flex flex-col shiny-panel shiny-panel-delay-2">
                 <div class="bg-transparent px-4 py-3 flex items-center justify-between border-b border-outline-variant">
                         <div class="flex items-center gap-2">
                             <span id="detail-league-name" class="text-xs font-medium text-on-surface-variant">Spain: LaLiga, Round 37</span>
@@ -2947,7 +2910,7 @@
                 </div>
 
                 <!-- View 2: Trending View -->
-                <div id="trending-view" style="display: none;" class="flex flex-col h-full">
+                <div id="trending-view" style="display: flex;" class="flex flex-col h-full">
                     <div class="space-y-4 px-4 pb-4">
                         <!-- Trending Teams -->
                         <section class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden shadow-sm shiny-panel shiny-panel-delay-2">
@@ -3476,219 +3439,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- View 4: Football View -->
-                <div id="football-view" style="display: none;" class="flex flex-col h-full overflow-y-auto no-scrollbar">
-                    <div class="space-y-4 px-4 pb-4">
-                        <!-- Match Overview (Match Header) -->
-                        <section class="bg-surface-container-low rounded-xl border border-outline-variant p-6 shiny-panel">
-                            <div class="flex items-center gap-2 mb-6">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXcUoZsxPWIOSqweVLfkt05vMYWw5lEoUjgUGl1z3uSNdOn51CrATo6C9hg6rApfV99L1c8AZd-h_mR3aWPdqERvWVht1Lx1bYEv45guD1llhmx69YvjdTCe9hZA2poRmEA2TxOffF3ZITFXv2IR9n_DK2jR-lYJVNOm6kpw_Os6MBcEK7DkZCEFDfGSTq-mvq7d0UE-o_LY_vwuEKuiynE5g9SmHZWY2tnfgMdQpfiwOG6FQTMciRqd-9KuA9o5aQzWQoIY4ilPDX" alt="Premier League Logo" class="w-6 h-6"/>
-                                <span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Premier League</span>
-                            </div>
-                            <div class="flex justify-between items-center mb-6">
-                                <!-- Arsenal -->
-                                <div class="flex flex-col items-center gap-2 w-1/3">
-                                    <div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center p-2 border border-outline-variant">
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRhpmrqcVKPL-tZcmI9nHvtEXwn4MnW2hi8desbpNKkgfqidTuy-ZGRbokgZDcj5M1qFMnezW7X5i8er1N2X_k40zDR3GNPXO3UYkZDAHJPEHt8EtwpjkezORfNW05MuDAt1s6NaXvLuB04NJ2mh-rgNpK-3lGo-55kUzm-ujx_mKVhnx7AGATprSiGJe0DKGHAdf9Odci57OFLvwp4HumCKlMEp7wdYhWCp_neRvkjUnHCL1vI1FrL955e9aJdbUFT5YEXEEribVU" alt="Arsenal Logo" class="w-12 h-12 object-contain"/>
-                                    </div>
-                                    <span class="font-bold text-sm text-on-surface">Arsenal</span>
-                                </div>
-                                <!-- Time/Countdown -->
-                                <div class="flex flex-col items-center w-1/3">
-                                    <span class="text-2xl font-black text-primary">02:00</span>
-                                    <span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider mt-1">Tomorrow</span>
-                                    <div class="mt-3 px-3 py-1 bg-surface-container rounded-md border border-outline-variant">
-                                        <span class="text-xs font-mono font-bold text-on-surface">08:51:01</span>
-                                    </div>
-                                </div>
-                                <!-- Burnley -->
-                                <div class="flex flex-col items-center gap-2 w-1/3">
-                                    <div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center p-2 border border-outline-variant">
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFhvPMxyVb8uIMa-g0Vjz_gYWWcvfCsdA6yTHVPbmVsIUzwJWJtuiPGHc7qctPb2-sCRsYjQAScZKqs40AWmWDOQpy8--VizYQifYkfr5ZOy8Km4eA1WsI7PKZBuuCE9pbFaaC8fV_InEc903Zp6FnQNaXzpoVNgJPwHnmZC4xNkokvP73nHwgV34RkOIott0pvG-MpBIdAxhKRZVyhUzV4APN2Ny97CnSJUJx_A94qQf4M7F2r06ET28yRRqtzmmtuQG9NZQqG08b" alt="Burnley Logo" class="w-12 h-12 object-contain"/>
-                                    </div>
-                                    <span class="font-bold text-sm text-on-surface">Burnley</span>
-                                </div>
-                            </div>
-                            <!-- Voting Section -->
-                            <div class="mt-8 border-t border-outline-variant pt-6">
-                                <div class="flex justify-between items-center mb-4">
-                                    <div>
-                                        <h3 class="font-bold text-sm text-on-surface">Who will win?</h3>
-                                        <p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Cast your vote!</p>
-                                    </div>
-                                    <div class="p-2 bg-surface-container rounded-lg border border-outline-variant">
-                                        <span class="material-symbols-outlined text-on-surface-variant text-base">poll</span>
-                                    </div>
-                                </div>
-                                <div class="grid grid-cols-3 gap-3">
-                                    <button class="bg-surface-container hover:bg-surface-variant/30 py-3 rounded-xl flex justify-center items-center transition-all border border-outline-variant">
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb1bks4oI2Cq6mg7YMQt7ZVvcpU2Sty_HoHTRTfDUxo1Wsl4XX50E9URS058ICdKEPZrr1B6SUoJQTKrnh8Q1tadbqevtXecMtNTDutKYYWqfsQETotEDJmsIcEBTD9qNSZ9pS-1alSuZ7nzmxlwXcswgsn0-Vs3vduw8vh5oSnaEUIVIsKBL9YCZ_sPF9f_CK2ybH7351nbbrJ7L8wERbElF7SA-9zk4VIyHUqYrjyUMx2mZnZCnYZXj6TxybC-WPvt5GgGy1_8-m" alt="Arsenal" class="w-5 h-5"/>
-                                    </button>
-                                    <button class="bg-surface-container hover:bg-surface-variant/30 py-3 rounded-xl flex justify-center items-center text-on-surface-variant font-black text-sm transition-all border border-outline-variant">X</button>
-                                    <button class="bg-surface-container hover:bg-surface-variant/30 py-3 rounded-xl flex justify-center items-center transition-all border border-outline-variant">
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3LRwyUku2wPCX1M-CF824eSJOScTyUPsyOrh5UgVhnC2DjO0T_1Z6K-LA2gYr0acGOJTnYILKt8017KsBHXBkZ6tMgVmoASiw07sHN96StfIuA8yc1oKqC7rilhna37--L4nCvfBW9GAh6iYdXPydqc4KHxIq81Q0hCWHzNCVA9W4bzTJdDSR3tbf5VLATfCGLO5Fp1Axe6iDm2howbGHs2x5tHEwKiQ7aGJzRAL8jxrurFLHmFeEasYtkcXhkDm0WWMlNVwExNKb" alt="Burnley" class="w-5 h-5"/>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Navigation Shortcuts -->
-                        <section class="grid grid-cols-2 gap-3">
-                            <div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between border border-outline-variant hover:bg-surface-variant/20 transition-colors cursor-pointer group">
-                                <div class="flex items-center gap-3">
-                                    <span class="text-primary font-black italic text-xl">FIFA</span>
-                                    <span class="text-xs font-bold text-on-surface">FIFA Rankings</span>
-                                </div>
-                                <span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:text-primary transition-colors">chevron_right</span>
-                            </div>
-                            <div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between border border-outline-variant hover:bg-surface-variant/20 transition-colors cursor-pointer group">
-                                <div class="flex items-center gap-3">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlCD7gAPeQlhpt72VIEBHbZpLdbSiQPj7inna4_eneDjgxwj-kjx46QKP1fGSGHWa4PHzG1LKpCTdFxy_fYYScMuA8qciY3L6aDJgZUKKr-UDKIrgkWkUbhZFGjV_-UFIQVm-9g4oooclXpT_BzsNbpnTAM02ArJf9m3f1btIPMyJ_DD2SW6Ch4DRHcd7dJCZ6ascSiem_5N87ehJN898OW5rbHNXVxQ-K2b-Aijw-9RW89U-6BUuSuL_K5uM32iLQU4iNKI7Dt0lm" alt="UEFA" class="w-6 h-6"/>
-                                    <span class="text-xs font-bold text-on-surface">UEFA Rankings</span>
-                                </div>
-                                <span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:text-primary transition-colors">chevron_right</span>
-                            </div>
-                        </section>
-
-                        <!-- Featured Odds -->
-                        <section class="bg-surface-container-low rounded-xl p-5 border border-outline-variant shadow-sm">
-                            <div class="flex justify-between items-center mb-6">
-                                <h3 class="text-sm font-bold text-on-surface uppercase tracking-wider">Featured odds</h3>
-                                <div class="flex gap-10 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest pr-4">
-                                    <span>1</span>
-                                    <span>X</span>
-                                    <span>2</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center gap-3">
-                                    <span class="text-[10px] text-error font-black uppercase">Live</span>
-                                    <div class="flex flex-col">
-                                        <span class="text-xs font-bold text-on-surface">South Melbourne</span>
-                                        <span class="text-xs font-bold text-on-surface">Caroline Springs</span>
-                                    </div>
-                                </div>
-                                <div class="flex gap-2">
-                                    <div class="bg-surface-container px-3 py-2 rounded-lg flex items-center gap-1 border border-outline-variant">
-                                        <span class="text-xs font-black text-on-surface">26.0</span>
-                                        <span class="material-symbols-outlined text-green-500 text-xs">arrow_drop_up</span>
-                                    </div>
-                                    <div class="bg-surface-container px-3 py-2 rounded-lg flex items-center gap-1 border border-outline-variant">
-                                        <span class="text-xs font-black text-on-surface">13.0</span>
-                                        <span class="material-symbols-outlined text-green-500 text-xs">arrow_drop_up</span>
-                                    </div>
-                                    <div class="bg-surface-container px-3 py-2 rounded-lg flex items-center gap-1 border border-error/30">
-                                        <span class="text-xs font-black text-on-surface">1.04</span>
-                                        <span class="material-symbols-outlined text-error text-xs">arrow_drop_down</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-[10px] text-on-surface-variant text-center mt-6 font-medium">
-                                Gamble responsibly 18+, www.gamblinghelponline.org.au
-                            </p>
-                        </section>
-
-                        <!-- Top Performances -->
-                        <section class="bg-surface-container-low rounded-xl p-5 border border-outline-variant shadow-sm">
-                            <div class="flex justify-between items-center mb-6">
-                                <h3 class="text-sm font-bold text-on-surface uppercase tracking-wider">Top performances</h3>
-                                <span class="material-symbols-outlined text-on-surface-variant text-base">info</span>
-                            </div>
-                            <!-- Player 1 -->
-                            <div class="flex items-center gap-4 mb-6 relative">
-                                <span class="text-xs font-bold text-on-surface-variant w-4">1</span>
-                                <div class="relative">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4mzGnqetn8-nT978rOYCegACgoMu3RvOaJK8G0vxsko6pDuLTRN56absr25qCQwktgiFFhdMj6cgCTNeGbL7bFYXmk-eBpIPKjD2QE2GaK9L16OD0kDIoKIiJzOzFxkgpSPS9lrtfIpLWP4jRgtT3v6cNoblg4UEgBnBJm1mezxBgGReJ6sLf6aaDfKaZTPfJuMpv5vHvcJW_ybgxnmaVWVmicHYDwS72KDnv_V5M-paNBwWciVDTUiNHvgmamf18DkAHjHvDUH1" alt="Anis Hadj Moussa" class="w-12 h-12 rounded-full border-2 border-outline-variant"/>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 bg-error rounded-full border border-surface-container-low flex items-center justify-center text-[8px] font-black text-white">1</div>
-                                </div>
-                                <div class="flex-grow">
-                                    <h4 class="font-bold text-xs text-on-surface">Anis Hadj Moussa</h4>
-                                    <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Midfielder</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex items-center gap-1 text-[10px] font-black text-on-surface-variant">
-                                        <span class="material-symbols-outlined text-xs">sports_soccer</span> 2
-                                    </div>
-                                    <div class="flex items-center gap-2 bg-surface-container rounded-md px-2 py-1 border border-outline-variant">
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3fZXuwKBfQl-tR3xiBaDPp4Szjryq_N2qKL5JIkPk0Yi6gLtpSqfHoWx-3Mb8g2sc8yMtN42fHpq1OjTcCgVt-CIZXeVlRKd7Z5UBmghk-DtGRDq-tbkid5F_Es6eZIqJ3VnMA30dlR_K7ottGWP6DKvkR8djQGXXOoUg3tTWrqcrTDpF_sagSePZV9ESzE9odPgxyxBRsDuEHjsjwq1-_oQk5ekAWtc1eNrf09x8MEMtd5MBfeMw2CDhGqxD7F-N4IybT5E0COv" class="w-4 h-4"/>
-                                        <span class="text-[10px] font-black text-on-surface">0 - 2</span>
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlIvtNiiBVXFQ_7lgyJRqxwa-C08stElevzCbgg3LXyMbXqyizImk3HqvINMpfl5hTCJ7zKG_5cI82G4fwxde8OZ2xbGvU9tuK3AnS5cQLH1ljkt9ZBnWoikBKpCLr64HqriglDljmnveb3epo-JMlXTs61mlmGhdO9F-EpQ6oEh4sSpDfOjMjyhXxnxJ3GsPO6OnQtwYhDm_4pKeqr0RPIQvjnWfiu07B87k8qZcS1WQkRhJNGcQAkpCbyYsI5sn62QhYYHo6_gd" class="w-4 h-4"/>
-                                    </div>
-                                    <div class="bg-primary text-on-primary font-black text-xs px-2 py-1 rounded-md">10</div>
-                                </div>
-                            </div>
-                            <!-- Player 2 -->
-                            <div class="flex items-center gap-4 mb-6 relative">
-                                <span class="text-xs font-bold text-on-surface-variant w-4">2</span>
-                                <div class="relative">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf-jremjAoslFG0t0kbonu4Qi6-k5huHqsHBA5RpRh_Ft21WWqj8R0XjYlvPlW6I818rHJYGG5ABmDEO74jd3LnJqthgyoB183hhRsfijvUBm_xIBt2f_2nLcH9aJU1_J_2TAFWXdU9SxG3TcTGS52LVIqCWCRJeHyY_iE20P8_bSQ5ksoC0YRjpomkbRyf2L6kfZESQi06LNwBuBNl2YP6biy0EBgiO1jXeljC7pXu1vHmYViJRNaLs8wew2YQI9zV6nBSTHmj1q6" alt="Christos Tzolis" class="w-12 h-12 rounded-full border-2 border-outline-variant"/>
-                                    <div class="absolute bottom-0 right-0 w-4 h-4 bg-primary rounded-full border border-surface-container-low flex items-center justify-center text-[8px] font-black text-on-primary">2</div>
-                                </div>
-                                <div class="flex-grow">
-                                    <h4 class="font-bold text-xs text-on-surface">Christos Tzolis</h4>
-                                    <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Midfielder</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex items-center gap-1 text-[10px] font-black text-on-surface-variant">
-                                        <span class="material-symbols-outlined text-xs">sports_soccer</span> 3
-                                    </div>
-                                    <div class="flex items-center gap-2 bg-surface-container rounded-md px-2 py-1 border border-outline-variant">
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQHwRnVAeJeOPr53wBV0KheLrk_sTDfYzL4MylyPLvraSjUArp_Z4H8rOnBqzy0jMYz7NppIWWF_bFlHsH6YmLhQvJ81tJqEgeTF2B3q3dOaM95NVIfFeDiFbyE_cuKotaDTAth7kcZvgh6-w4EriZ0j99-mB2O4Ld22yi8Aah30LItu7mdzdE-kxSESg0kPdhjMz_cQPhJxAGPQ1ZAj9Mm2gtt4uOyDk-RkoYb9H21KeU7Tn8TRDui5MQQKg9N_x6dgn3TRhCeZYW" class="w-4 h-4"/>
-                                        <span class="text-[10px] font-black text-on-surface">5 - 0</span>
-                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeV-z7ndA2RCd0PMv2bq3Q30o6Kr7-g8EMDhGUn2FXaSBLR0XXl9KWQlebp-SQw6XEtt40_163BnVUwbRyjuyaG3kNaYZfHhwyfuaIVWT76a_vgzdF-LV4-x_joFOQW0azAGPCLHM-NO-DpH_JtqeoPum84jx1BdIVI9yFN1lSylSyTOSy4mywnFZ0612Yzud0EKS0Q_7_NG_LhxUvAqa7k6nUnHlCpirNHLlf5AKJUJv3akicqhi7joGj2yhtBT-DAKqzmOsUDzsm" class="w-4 h-4"/>
-                                    </div>
-                                    <div class="bg-primary text-on-primary font-black text-xs px-2 py-1 rounded-md">10</div>
-                                </div>
-                            </div>
-                            <!-- Show More -->
-                            <button class="w-full flex items-center justify-center gap-2 text-[11px] font-black text-primary uppercase tracking-widest py-3 border-t border-outline-variant mt-2 hover:bg-primary/5 transition-colors">
-                                Show more 
-                                <span class="material-symbols-outlined text-sm">expand_more</span>
-                            </button>
-                        </section>
-
-                        <!-- Promotional Banner -->
-                        <section class="bg-gradient-to-br from-surface-container-low to-[#2d1b31] rounded-xl overflow-hidden border border-outline-variant shadow-sm shiny-panel">
-                            <div class="p-6 flex justify-between">
-                                <div class="flex flex-col max-w-[60%]">
-                                    <div class="flex items-center gap-2 mb-4">
-                                        <div class="bg-error p-1 rounded">
-                                            <span class="material-symbols-outlined text-white text-base">emoji_events</span>
-                                        </div>
-                                        <span class="font-black text-xl italic tracking-tighter text-on-surface">Torneo</span>
-                                    </div>
-                                    <h4 class="font-bold text-sm leading-tight mb-4 text-on-surface">Did you know your tournament can appear here, too?</h4>
-                                    <ul class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider space-y-2 mb-6">
-                                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Tournament planning tool</li>
-                                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Visibility on Sofascore</li>
-                                    </ul>
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj9gSkaruI8XPIoPevdHH-uoi4zNmYTtdrnx7WnRfHB0QOWK6RO2ntZwvHaoOMKNMGYMq_c0ad8FE9jDkT12waMd54jB30wo1UMkkaRUvORyhSJqJY2zdjInXkCuq9pOSLSgTcEWw6KI_0Ac06NZ8h5LqBHdJMDP83aOBrKWdaYYCrAtVye-VuOCv57TuVGyWaIeLAxCdgOVt9TP20vl-Uw3CVkw5k3_6YgeciWl15vsuwSFDcwg9EBk3S3-aEBc5NCSv1de6drjH9" alt="Promo" class="w-16 h-16 rounded-lg bg-white p-1 border border-outline-variant"/>
-                                </div>
-                                <div class="relative w-1/3 -mr-2">
-                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClpdxbiYAVKt_v9mZXa7T1JJJPlBpUQr3-mz2yAn47D0lBGvx1TPE2vlVQE1QSiJyl9QIdqnmYfilgb-SOo2KtoF7jRyq2uTAf3bN_4g9dVACGWwhrxD9H3qiKpPUwmQELfFqUScAxuINTX9zbi5ZtCrb3FMLzfHMEpOfi2VY0bzLZblcMa0ARMJfqDObCrY3_MFdZIrrSav-n8mra4z6y3vca5j5qXWxBACuqF1PuucGii4BOMMTWJZBGrR043ADSMdBqt9J9idSA" alt="App" class="rounded-tl-xl border-t border-l border-outline-variant shadow-2xl"/>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- About Section -->
-                        <section class="mt-4 mb-8 px-4 text-center">
-                            <h3 class="text-xs font-black uppercase tracking-widest text-on-surface-variant mb-4">About Football</h3>
-                            <p class="text-[11px] text-on-surface-variant leading-relaxed text-left font-medium">
-                                The live football results page on Sofascore delivers real-time football scores for all ongoing matches. Sofascore provides comprehensive coverage of hundreds of football leagues, cups, and tournaments, offering live updated results, statistics, league tables, video highlights, and fixtures. From the most popular football leagues — 
-                                <a href="#" class="text-primary hover:underline">UEFA Champions League</a>, 
-                                <a href="#" class="text-primary hover:underline">UEFA Europa League</a>, 
-                                <a href="#" class="text-primary hover:underline">Premier League</a>, 
-                                <a href="#" class="text-primary hover:underline">LaLiga</a>, 
-                                <a href="#" class="text-primary hover:underline">Bundesliga</a>, 
-                                <a href="#" class="text-primary hover:underline">Serie A</a>, 
-                                <a href="#" class="text-primary hover:underline">Ligue 1</a>, and 
-                                <a href="#" class="text-primary hover:underline">Brasileirão Série A</a> 
-                                — to top player ratings, match statistics, and all football matches played today, our football live score page has everything you need.
-                            </p>
-                        </section>
-                    </div>
-                </div>
         </aside>
 
         <!-- Advertising Panel (Third Column) - Hanging Style -->
@@ -3751,114 +3501,6 @@
             setInterval(updateCountdown, 1000);
         }
 
-        // Global state to track views and last viewed match
-        let lastViewedMatch = null;
-        let lastViewedLeague = null;
-        let activeViewInSportsTab = 'detail'; // Default to 'detail' to show match on load
-        let currentSport = 'Football';
-
-        // Sports Configuration
-        const sportsData = {
-            'Football': {
-                icon: 'assets/icons/Football.webp',
-                banner: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDXcUoZsxPWIOSqweVLfkt05vMYWw5lEoUjgUGl1z3uSNdOn51CrATo6C9hg6rApfV99L1c8AZd-h_mR3aWPdqERvWVht1Lx1bYEv45guD1llhmx69YvjdTCe9hZA2poRmEA2TxOffF3ZITFXv2IR9n_DK2jR-lYJVNOm6kpw_Os6MBcEK7DkZCEFDfGSTq-mvq7d0UE-o_LY_vwuEKuiynE5g9SmHZWY2tnfgMdQpfiwOG6FQTMciRqd-9KuA9o5aQzWQoIY4ilPDX',
-                leagues: [
-                    { name: 'Serie A', country: 'Italy', flag: '🇮🇹', count: 3, matches: [
-                        { time: '01:45', status: 'FT', home: 'Cagliari', away: 'Torino',    hs: 2, as: 2, hL: 'assets/football-logos/logos/Italy - Serie A/Cagliari Calcio.webp', aL: 'assets/football-logos/logos/Italy - Serie A/Torino FC.webp' },
-                        { time: '01:45', status: 'FT', home: 'Sassuolo', away: 'Lecce',     hs: 2, as: 2, hL: 'assets/football-logos/logos/Italy - Serie A/US Sassuolo.webp',     aL: 'assets/football-logos/logos/Italy - Serie A/US Lecce.webp' },
-                        { time: '01:45', status: 'FT', home: 'Udinese',  away: 'Cremonese', hs: 0, as: 0, hL: 'assets/football-logos/logos/Italy - Serie A/Udinese Calcio.webp',  aL: 'assets/football-logos/logos/Italy - Serie A/US Cremonese.webp' }
-                    ]},
-                    { name: 'LaLiga', country: 'Spain', flag: '🇪🇸', count: 10, matches: [
-                        { time: '00:00', status: 'FT', home: 'Athletic Club',  away: 'Celta',       hs: 1, as: 1, hL: 'assets/football-logos/logos/Spain - LaLiga/Athletic Bilbao.webp',        aL: 'assets/football-logos/logos/Spain - LaLiga/Celta de Vigo.webp' },
-                        { time: '00:00', status: 'FT', home: 'Atl. Madrid',    away: 'Girona',      hs: 1, as: 0, hL: 'assets/football-logos/logos/Spain - LaLiga/Atlético de Madrid.webp',     aL: 'assets/football-logos/logos/Spain - LaLiga/Girona FC.webp' },
-                        { time: '00:00', status: 'FT', home: 'Sevilla',        away: 'Real Madrid',  hs: 0, as: 1, hL: 'assets/football-logos/logos/Spain - LaLiga/Sevilla FC.webp',            aL: 'assets/football-logos/logos/Spain - LaLiga/Real Madrid.webp' },
-                        { time: '02:15', status: 'FT', home: 'Barcelona',      away: 'Real Betis',  hs: 3, as: 3, hL: 'assets/football-logos/logos/Spain - LaLiga/FC Barcelona.webp',           aL: 'assets/football-logos/logos/Spain - LaLiga/Real Betis Balompié.webp' }
-                    ]},
-                    { name: 'Ligue 1', country: 'France', flag: '🇫🇷', count: 9, matches: [
-                        { time: '02:00', status: 'FT',        home: 'Lille',      away: 'Auxerre',   hs: 0, as: 0, hL: 'assets/football-logos/logos/France - Ligue 1/LOSC Lille.webp',           aL: 'assets/football-logos/logos/France - Ligue 1/AJ Auxerre.webp' },
-                        { time: '02:00', status: 'FT',        home: 'Lyon',       away: 'Lens',      hs: 0, as: 4, hL: 'assets/football-logos/logos/France - Ligue 1/Olympique Lyon.webp',       aL: 'assets/football-logos/logos/France - Ligue 1/RC Lens.webp' },
-                        { time: '02:00', status: 'FT',        home: 'Marseille',  away: 'Rennes',    hs: 3, as: 3, hL: 'assets/football-logos/logos/France - Ligue 1/Olympique Marseille.webp',  aL: 'assets/football-logos/logos/France - Ligue 1/Stade Rennais FC.webp' }
-                    ]},
-                    { name: 'Premier League', country: 'England', flag: '🇬🇧', count: 5, matches: [
-                        { time: '20:00', status: 'Upcoming', home: 'Arsenal', away: 'Chelsea', hs: '-', as: '-', hL: 'assets/football-logos/logos/England - Premier League/Arsenal FC.webp', aL: 'assets/football-logos/logos/England - Premier League/Chelsea FC.webp' },
-                        { time: '22:30', status: 'Upcoming', home: 'Liverpool', away: 'Man City', hs: '-', as: '-', hL: 'assets/football-logos/logos/England - Premier League/Liverpool FC.webp', aL: 'assets/football-logos/logos/England - Premier League/Manchester City.webp' }
-                    ]},
-                    { name: 'Bundesliga', country: 'Germany', flag: '🇩🇪', count: 4, matches: [
-                        { time: '20:30', status: 'Upcoming', home: 'Bayern', away: 'Dortmund', hs: '-', as: '-', hL: 'assets/football-logos/logos/Germany - Bundesliga/Bayern Munich.webp', aL: 'assets/football-logos/logos/Germany - Bundesliga/Borussia Dortmund.webp' }
-                    ]},
-                    { name: 'Brasileirão Betano', country: 'Brazil', flag: '🇧🇷', count: 5, matches: [
-                        { time: '02:00', status: 'FT', home: 'Bahia',         away: 'Grêmio',      hs: 1, as: 1, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '02:00', status: 'FT', home: 'Botafogo',      away: 'Corinthians', hs: 3, as: 3, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '04:30', status: 'FT', home: 'Chapecoense',   away: 'Remo',        hs: 2, as: 2, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '04:30', status: 'FT', home: 'RB Bragantino', away: 'Vitória',     hs: 2, as: 2, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '05:30', status: 'FT', home: 'Athletico',     away: 'Flamengo',    hs: 1, as: 1, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' }
-                    ]},
-                    { name: 'Trendyol Süper Lig', country: 'Türkiye', flag: '🇹🇷', count: 4, matches: [
-                        { time: '00:00', status: 'FT', home: 'Fenerbahçe',  away: 'Eyüpspor',       hs: 3, as: 3, hL: 'assets/football-logos/logos/Türkiye - Süper Lig/Fenerbahce.webp',        aL: 'assets/football-logos/logos/Türkiye - Süper Lig/Eyüpspor.webp' }
-                    ]},
-                    { name: 'MLS',                                country: 'USA',     flag: '🇺🇸', count: 2, matches: [
-                        { time: '05:00', status: 'FT', home: 'Inter Miami', away: 'Portland',    hs: 2, as: 2, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '07:00', status: 'FT', home: 'Nashville',   away: 'Los Angeles', hs: 3, as: 3, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' }
-                    ]},
-                    { name: 'Brasileirão Série B', country: 'Brazil', flag: '🇧🇷', count: 5, matches: [
-                        { time: '02:00', status: 'FT', home: 'Athletic',  away: 'Juventude',   hs: 1, as: 1, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '04:00', status: 'FT', home: 'Vila Nova', away: 'Avaí',        hs: 2, as: 2, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '04:30', status: 'FT', home: 'Ceará',     away: 'Fortaleza',   hs: 2, as: 2, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '04:30', status: 'FT', home: 'Criciúma',  away: 'Atlético-GO', hs: 1, as: 1, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' },
-                        { time: '06:30', status: 'FT', home: 'Sport',     away: 'CRB',         hs: 1, as: 1, hL: 'assets/icons/Football.webp', aL: 'assets/icons/Football.webp' }
-                    ]},
-                    { name: 'Liga de Primera',             country: 'Chile',   flag: '🇨🇱', count: 3, matches: [] },
-                    { name: 'División Profesional',        country: 'Bolivia', flag: '🇧🇴', count: 3, matches: [] }
-                ]
-            },
-            'Basketball': {
-                icon: 'assets/icons/Basketball.webp',
-                banner: 'assets/icons/Basketball.webp',
-                leagues: [
-                    { name: 'NBA', country: 'USA', flag: '🇺🇸', count: 5, matches: [
-                        { time: '07:30', status: 'FT', home: 'LA Lakers', away: 'GS Warriors', hs: 112, as: 108, hL: 'assets/icons/Basketball.webp', aL: 'assets/icons/Basketball.webp' },
-                        { time: '08:00', status: 'Live', home: 'Celtics', away: 'Bucks', hs: 85, as: 82, hL: 'assets/icons/Basketball.webp', aL: 'assets/icons/Basketball.webp' }
-                    ]},
-                    { name: 'EuroLeague', country: 'Europe', flag: '🇪🇺', count: 3, matches: [
-                        { time: '20:00', status: 'Upcoming', home: 'Real Madrid', away: 'Monaco', hs: '-', as: '-', hL: 'assets/icons/Basketball.webp', aL: 'assets/icons/Basketball.webp' }
-                    ]}
-                ]
-            },
-            'Tennis': {
-                icon: 'assets/icons/Tennis.webp',
-                banner: 'assets/icons/Tennis.webp',
-                leagues: [
-                    { name: 'Roland Garros', country: 'France', flag: '🇫🇷', count: 12, matches: [
-                        { time: '16:00', status: 'Live', home: 'Alcaraz C.', away: 'Sinner J.', hs: 2, as: 1, hL: 'assets/icons/Tennis.webp', aL: 'assets/icons/Tennis.webp' },
-                        { time: '17:30', status: 'Upcoming', home: 'Djokovic N.', away: 'Ruud C.', hs: '-', as: '-', hL: 'assets/icons/Tennis.webp', aL: 'assets/icons/Tennis.webp' }
-                    ]}
-                ]
-            },
-            'Ice hockey': { icon: 'assets/icons/Ice_Hockey.webp', leagues: [{ name: 'NHL', country: 'USA/Canada', flag: '🇺🇸', count: 4, matches: [] }] },
-            'Table tennis': { icon: 'assets/icons/Table_Tennis.webp', leagues: [{ name: 'WTT Champions', country: 'World', flag: '🌍', count: 8, matches: [] }] },
-            'Baseball': { icon: 'assets/icons/Baseball.webp', leagues: [{ name: 'MLB', country: 'USA', flag: '🇺🇸', count: 15, matches: [] }] },
-            'Handball': { icon: 'assets/icons/Handball.webp', leagues: [{ name: 'Champions League', country: 'Europe', flag: '🇪🇺', count: 6, matches: [] }] },
-            'American football': { icon: 'assets/icons/American_Football.webp', leagues: [{ name: 'NFL', country: 'USA', flag: '🇺🇸', count: 1, matches: [] }] },
-            'Volleyball': { icon: 'assets/icons/Volleyball.webp', leagues: [{ name: 'Nations League', country: 'World', flag: '🌍', count: 4, matches: [] }] },
-            'Darts': { icon: 'assets/icons/Darts.webp', leagues: [{ name: 'Premier League', country: 'UK', flag: '🇬🇧', count: 2, matches: [] }] },
-            'Esports': { icon: 'assets/icons/E-Sports.webp', leagues: [{ name: 'LCK Summer', country: 'Korea', flag: '🇰🇷', count: 3, matches: [] }] },
-            'Cricket': { icon: 'assets/icons/Cricket.webp', leagues: [{ name: 'IPL', country: 'India', flag: '🇮🇳', count: 1, matches: [] }] },
-            'Rugby': { icon: 'assets/icons/Rugby_League.webp', leagues: [{ name: 'Six Nations', country: 'Europe', flag: '🇪🇺', count: 0, matches: [] }] },
-            'Badminton': { icon: 'assets/icons/Badminton.webp', leagues: [{ name: 'Indonesia Open', country: 'Indonesia', flag: '🇮🇩', count: 10, matches: [] }] },
-            'Snooker': { icon: 'assets/icons/Snooke_Pool.webp', leagues: [{ name: 'World Championship', country: 'UK', flag: '🇬🇧', count: 2, matches: [] }] },
-            'Cycling': { icon: 'assets/icons/Cycling.webp', leagues: [{ name: 'Tour de France', country: 'France', flag: '🇫🇷', count: 1, matches: [] }] },
-            'Minifootball': { icon: 'assets/icons/Short_Soccer.webp', leagues: [{ name: 'EMF Euro', country: 'Europe', flag: '🇪🇺', count: 5, matches: [] }] },
-            'Bandy': { icon: 'assets/icons/Bandy.webp', leagues: [{ name: 'Elitserien', country: 'Sweden', flag: '🇸🇪', count: 2, matches: [] }] },
-            'Motorsport': { icon: 'assets/icons/Motor_Racing.webp', leagues: [{ name: 'Formula 1', country: 'World', flag: '🌍', count: 1, matches: [] }] },
-            'MMA': { icon: 'assets/icons/MMA.webp', leagues: [{ name: 'UFC 302', country: 'USA', flag: '🇺🇸', count: 12, matches: [] }] },
-            'Futsal': { icon: 'assets/icons/Futsal.webp', leagues: [{ name: 'World Cup', country: 'World', flag: '🌍', count: 4, matches: [] }] },
-            'Water polo': { icon: 'assets/icons/Water_Polo.webp', leagues: [{ name: 'Champions League', country: 'Europe', flag: '🇪🇺', count: 3, matches: [] }] },
-            'Aussie rule': { icon: 'assets/icons/Aussie_Rules.webp', leagues: [{ name: 'AFL', country: 'Australia', flag: '🇦🇺', count: 8, matches: [] }] },
-            'Beach volleyball': { icon: 'assets/icons/Beach_Volleyball.webp', leagues: [{ name: 'Pro Tour', country: 'World', flag: '🌍', count: 6, matches: [] }] },
-            'Floorball': { icon: 'assets/icons/Floorball.webp', leagues: [{ name: 'SSL', country: 'Sweden', flag: '🇸🇪', count: 4, matches: [] }] },
-            'Padel': { icon: 'assets/icons/Padel.webp', leagues: [{ name: 'World Tour', country: 'Spain', flag: '🇪🇸', count: 5, matches: [] }] }
-        };
-
         // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, initializing app...');
@@ -3877,160 +3519,35 @@
             initTrendingSwitch();
         });
 
-        // Global functions for sports switching
-        window.showSport = function(sportName) {
-            console.log('Showing Sport View:', sportName);
-            currentSport = sportName;
-            activeViewInSportsTab = 'football'; // Reuse football-view container as generic sport container
-            
-            const detailView = document.getElementById('match-detail-view');
-            const trendingView = document.getElementById('trending-view');
-            const wc26View = document.getElementById('wc26-view');
-            const footballView = document.getElementById('football-view');
-
-            if (detailView) detailView.style.display = 'none';
-            if (trendingView) trendingView.style.display = 'none';
-            if (wc26View) wc26View.style.display = 'none';
-            if (footballView) footballView.style.display = 'flex';
-
-            // Update content in football-view
-            updateSportViewContent(sportName);
-
-            // Update match list in left panel
-            initMatchList(sportName);
-
-            // Hide global banner
-            const globalBanner = document.getElementById('wc26-global-header');
-            if (globalBanner) globalBanner.classList.add('hidden');
-
-            // Show default left panel
-            const defaultLeftPanel = document.getElementById('default-left-panel');
-            const wc26LeftPanel = document.getElementById('wc26-left-panel');
-            if (defaultLeftPanel) defaultLeftPanel.classList.remove('hidden');
-            if (wc26LeftPanel) wc26LeftPanel.classList.add('hidden');
-
-            // Update active state for top nav
-            const topNavItems = document.querySelectorAll('.nav-item');
-            topNavItems.forEach(item => {
-                item.classList.remove('nav-item-active', 'text-primary', 'border-primary');
-                item.classList.add('text-on-surface-variant', 'border-transparent');
-            });
-            
-            // Find and highlight the correct button
-            const btnId = sportName.toLowerCase().replace(/\s/g, '') + '-button';
-            const sportBtn = document.getElementById(btnId);
-            if (sportBtn) {
-                sportBtn.classList.add('nav-item-active', 'text-primary', 'border-primary');
-                sportBtn.classList.remove('text-on-surface-variant', 'border-transparent');
-            }
-        };
-
-        window.updateSportViewContent = function(sportName) {
-            const sport = sportsData[sportName];
-            const footballView = document.getElementById('football-view');
-            if (!sport || !footballView) return;
-
-            // Update Banner
-            const bannerImg = footballView.querySelector('section img[alt="Premier League Logo"]');
-            const bannerText = footballView.querySelector('section span.text-on-surface-variant');
-            const homeTeamName = footballView.querySelector('section span.text-on-surface:nth-of-type(1)');
-            const awayTeamName = footballView.querySelector('section span.text-on-surface:nth-of-type(2)');
-            const aboutTitle = footballView.querySelector('section.mt-4 h3');
-            const aboutText = footballView.querySelector('section.mt-4 p');
-            
-            // Find sections by their content since they don't have IDs
-            const sections = footballView.querySelectorAll('section');
-            let navShortcuts = null;
-            let featuredOdds = null;
-            let topPerformances = null;
-
-            sections.forEach(sec => {
-                const h3 = sec.querySelector('h3');
-                if (h3) {
-                    if (h3.textContent.includes('Featured odds')) featuredOdds = sec;
-                    if (h3.textContent.includes('Top performances')) topPerformances = sec;
-                }
-                if (sec.classList.contains('grid') && sec.classList.contains('grid-cols-2')) {
-                    navShortcuts = sec;
-                }
-            });
-
-            if (bannerImg) bannerImg.src = sport.icon;
-            if (bannerText) bannerText.textContent = sportName;
-            
-            // Hide football-specific sections if not football
-            if (sportName !== 'Football') {
-                if (navShortcuts) navShortcuts.style.display = 'none';
-                if (featuredOdds) featuredOdds.style.display = 'none';
-                if (topPerformances) topPerformances.style.display = 'none';
-            } else {
-                if (navShortcuts) navShortcuts.style.display = 'grid';
-                if (featuredOdds) featuredOdds.style.display = 'block';
-                if (topPerformances) topPerformances.style.display = 'block';
-            }
-
-            // Update specific data if available in first match
-            if (sport.leagues[0] && sport.leagues[0].matches && sport.leagues[0].matches[0]) {
-                const firstMatch = sport.leagues[0].matches[0];
-                if (homeTeamName) homeTeamName.textContent = firstMatch.home;
-                if (awayTeamName) awayTeamName.textContent = firstMatch.away;
-                const scoreText = footballView.querySelector('section span.text-primary');
-                if (scoreText) scoreText.textContent = firstMatch.hs !== '-' ? `${firstMatch.hs} : ${firstMatch.as}` : firstMatch.time;
-            } else {
-                if (homeTeamName) homeTeamName.textContent = 'Team A';
-                if (awayTeamName) awayTeamName.textContent = 'Team B';
-                const scoreText = footballView.querySelector('section span.text-primary');
-                if (scoreText) scoreText.textContent = '00:00';
-            }
-
-            if (aboutTitle) aboutTitle.textContent = `About ${sportName}`;
-            if (aboutText) aboutText.textContent = `Get the latest ${sportName} live scores, results and fixtures from across the world, including leagues, cups and tournaments with real-time updates and statistics.`;
-        };
-
         // Trending View Switch Logic
         function initTrendingSwitch() {
+            const closeBtn = document.getElementById('close-detail-btn');
+            const closeWC26Btn = document.getElementById('close-wc26-btn');
             const detailView = document.getElementById('match-detail-view');
             const trendingView = document.getElementById('trending-view');
             const wc26View = document.getElementById('wc26-view');
-            const footballView = document.getElementById('football-view');
+            
             const trendingNavBtn = document.getElementById('trending-nav-btn');
+            const mobileTrendingNavBtn = document.getElementById('mobile-trending-nav-btn');
             const topNavItems = document.querySelectorAll('.nav-item');
+            const wc26NavBtn = Array.from(topNavItems).find(item => item.textContent.includes('WC26'));
 
-            window.showTrending = function(forceHome = false) {
-                if (!forceHome && lastViewedMatch) {
-                    activeViewInSportsTab = 'detail';
-                } else if (forceHome) {
-                    activeViewInSportsTab = 'trending';
-                }
-
-                if (activeViewInSportsTab === 'detail' && lastViewedMatch && window.innerWidth >= 1024) {
-                    if (detailView) detailView.style.display = 'flex';
-                    if (trendingView) trendingView.style.display = 'none';
-                    if (wc26View) wc26View.style.display = 'none';
-                    if (footballView) footballView.style.display = 'none';
-                } else {
-                    if (detailView) detailView.style.display = 'none';
-                    if (wc26View) wc26View.style.display = 'none';
-                    if (footballView) footballView.style.display = 'none';
-                    if (trendingView) trendingView.style.display = 'flex';
-                    
-                    if (!forceHome && activeViewInSportsTab === 'detail' && lastViewedMatch && window.innerWidth < 1024) {
-                        const modal = document.getElementById('match-detail-modal');
-                        if (modal) {
-                            modal.classList.remove('hidden');
-                            document.body.style.overflow = 'hidden';
-                        }
-                    }
-                }
+            function showTrending() {
+                if (detailView) detailView.style.display = 'none';
+                if (wc26View) wc26View.style.display = 'none';
+                if (trendingView) trendingView.style.display = 'flex';
                 
+                // Hide global banner
                 const globalBanner = document.getElementById('wc26-global-header');
                 if (globalBanner) globalBanner.classList.add('hidden');
 
+                // Show default left panel, hide wc26 left panel
                 const defaultLeftPanel = document.getElementById('default-left-panel');
                 const wc26LeftPanel = document.getElementById('wc26-left-panel');
                 if (defaultLeftPanel) defaultLeftPanel.classList.remove('hidden');
                 if (wc26LeftPanel) wc26LeftPanel.classList.add('hidden');
 
+                // Update active state for top nav
                 topNavItems.forEach(item => {
                     item.classList.remove('nav-item-active', 'text-primary', 'border-primary');
                     item.classList.add('text-on-surface-variant', 'border-transparent');
@@ -4039,26 +3556,62 @@
                     trendingNavBtn.classList.add('nav-item-active', 'text-primary', 'border-primary');
                     trendingNavBtn.classList.remove('text-on-surface-variant', 'border-transparent');
                 }
-            };
+            }
 
-            const wc26NavBtn = Array.from(topNavItems).find(item => item.textContent.includes('WC26'));
+            if (closeBtn) {
+                closeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showTrending();
+                });
+            }
+
+            if (closeWC26Btn) {
+                closeWC26Btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showTrending();
+                });
+            }
+
+            if (trendingNavBtn) {
+                trendingNavBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showTrending();
+                });
+            }
+
+            if (mobileTrendingNavBtn) {
+                mobileTrendingNavBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showTrending();
+                    // Close mobile sidebar if open
+                    const sidebar = document.getElementById('mobile-sidebar');
+                    const overlay = document.getElementById('mobile-sidebar-overlay');
+                    if (sidebar) sidebar.classList.add('collapsed');
+                    if (overlay) overlay.classList.remove('active');
+                });
+            }
+
             if (wc26NavBtn) {
                 wc26NavBtn.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();
                     if (detailView) detailView.style.display = 'none';
                     if (trendingView) trendingView.style.display = 'none';
-                    if (footballView) footballView.style.display = 'none';
                     if (wc26View) wc26View.style.display = 'flex';
                     
+                    // Show global banner
                     const globalBanner = document.getElementById('wc26-global-header');
                     if (globalBanner) globalBanner.classList.remove('hidden');
 
+                    // Show wc26 left panel, hide default left panel
                     const defaultLeftPanel = document.getElementById('default-left-panel');
                     const wc26LeftPanel = document.getElementById('wc26-left-panel');
                     if (defaultLeftPanel) defaultLeftPanel.classList.add('hidden');
                     if (wc26LeftPanel) wc26LeftPanel.classList.remove('hidden');
 
+                    // Update active state
                     topNavItems.forEach(item => {
                         item.classList.remove('nav-item-active', 'text-primary', 'border-primary');
                         item.classList.add('text-on-surface-variant', 'border-transparent');
@@ -4067,26 +3620,13 @@
                     wc26NavBtn.classList.remove('text-on-surface-variant', 'border-transparent');
                 });
             }
-
-            if (trendingNavBtn) {
-                trendingNavBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    showTrending(true);
-                });
-            }
         }
 
         // Function to update match detail
         function updateMatchDetail(match, league) {
-            // Update global state
-            lastViewedMatch = match;
-            lastViewedLeague = league;
-            activeViewInSportsTab = 'detail';
-
             const detailView = document.getElementById('match-detail-view');
             const trendingView = document.getElementById('trending-view');
             const wc26View = document.getElementById('wc26-view');
-            const footballView = document.getElementById('football-view');
             const defaultLeftPanel = document.getElementById('default-left-panel');
             const wc26LeftPanel = document.getElementById('wc26-left-panel');
             const globalBanner = document.getElementById('wc26-global-header');
@@ -4094,7 +3634,6 @@
             if (detailView) detailView.style.display = 'flex';
             if (trendingView) trendingView.style.display = 'none';
             if (wc26View) wc26View.style.display = 'none';
-            if (footballView) footballView.style.display = 'none';
             if (defaultLeftPanel) defaultLeftPanel.classList.remove('hidden');
             if (wc26LeftPanel) wc26LeftPanel.classList.add('hidden');
             if (globalBanner) globalBanner.classList.add('hidden');
@@ -4167,18 +3706,73 @@
         }
 
         // Match List with Collapse
-        function initMatchList(sportName = 'Football') {
+        function initMatchList() {
             const B = 'assets/football-logos/logos/';
-            
-            // Get data from sportsData global config
-            const sport = sportsData[sportName] || sportsData['Football'];
-            const leagues = sport.leagues;
+            const F = 'assets/icons/Football.webp';
+            const leagues = [
+                { name: 'Serie A', country: 'Italy', flag: '🇮🇹', count: 3, matches: [
+                    { time: '01:45', status: 'FT', home: 'Cagliari', away: 'Torino',    hs: 2, as: 2, hL: B+'Italy - Serie A/Cagliari Calcio.webp', aL: B+'Italy - Serie A/Torino FC.webp' },
+                    { time: '01:45', status: 'FT', home: 'Sassuolo', away: 'Lecce',     hs: 2, as: 2, hL: B+'Italy - Serie A/US Sassuolo.webp',     aL: B+'Italy - Serie A/US Lecce.webp' },
+                    { time: '01:45', status: 'FT', home: 'Udinese',  away: 'Cremonese', hs: 0, as: 0, hL: B+'Italy - Serie A/Udinese Calcio.webp',  aL: B+'Italy - Serie A/US Cremonese.webp' }
+                ]},
+                { name: 'LaLiga', country: 'Spain', flag: '🇪🇸', count: 10, matches: [
+                    { time: '00:00', status: 'FT', home: 'Athletic Club',  away: 'Celta',       hs: 1, as: 1, hL: B+'Spain - LaLiga/Athletic Bilbao.webp',        aL: B+'Spain - LaLiga/Celta de Vigo.webp' },
+                    { time: '00:00', status: 'FT', home: 'Atl. Madrid',    away: 'Girona',      hs: 1, as: 0, hL: B+'Spain - LaLiga/Atlético de Madrid.webp',     aL: B+'Spain - LaLiga/Girona FC.webp' },
+                    { time: '00:00', status: 'FT', home: 'Elche',          away: 'Getafe',      hs: 1, as: 1, hL: B+'Spain - LaLiga/Elche CF.webp',               aL: B+'Spain - LaLiga/Getafe CF.webp' },
+                    { time: '00:00', status: 'FT', home: 'Levante',        away: 'Mallorca',    hs: 2, as: 2, hL: B+'Spain - LaLiga/Levante UD.webp',             aL: B+'Spain - LaLiga/RCD Mallorca.webp' },
+                    { time: '00:00', status: 'FT', home: 'Osasuna',        away: 'Espanyol',    hs: 1, as: 1, hL: B+'Spain - LaLiga/CA Osasuna.webp',             aL: B+'Spain - LaLiga/RCD Espanyol Barcelona.webp' },
+                    { time: '00:00', status: 'FT', home: 'Rayo Vallecano', away: 'Villarreal',  hs: 2, as: 2, hL: B+'Spain - LaLiga/Rayo Vallecano.webp',         aL: B+'Spain - LaLiga/Villarreal CF.webp' },
+                    { time: '00:00', status: 'FT', home: 'Real Oviedo',    away: 'Alavés',      hs: 0, as: 0, hL: B+'Spain - LaLiga/Real Oviedo.webp',            aL: B+'Spain - LaLiga/Deportivo Alavés.webp' },
+                    { time: '00:00', status: 'FT', home: 'Real Sociedad',  away: 'Valencia',    hs: 3, as: 3, hL: B+'Spain - LaLiga/Real Sociedad.webp',          aL: B+'Spain - LaLiga/Valencia CF.webp' },
+                    { time: '00:00', status: 'FT', home: 'Sevilla',        away: 'Real Madrid',  hs: 0, as: 1, hL: B+'Spain - LaLiga/Sevilla FC.webp',            aL: B+'Spain - LaLiga/Real Madrid.webp' },
+                    { time: '02:15', status: 'FT', home: 'Barcelona',      away: 'Real Betis',  hs: 3, as: 3, hL: B+'Spain - LaLiga/FC Barcelona.webp',           aL: B+'Spain - LaLiga/Real Betis Balompié.webp' }
+                ]},
+                { name: 'Ligue 1', country: 'France', flag: '🇫🇷', count: 9, matches: [
+                    { time: '02:00', status: 'FT',        home: 'Lille',      away: 'Auxerre',   hs: 0, as: 0, hL: B+'France - Ligue 1/LOSC Lille.webp',           aL: B+'France - Ligue 1/AJ Auxerre.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Lorient',    away: 'Le Havre',  hs: 0, as: 0, hL: B+'France - Ligue 1/FC Lorient.webp',           aL: B+'France - Ligue 1/Le Havre AC.webp' },
+                    { time: '02:00', status: 'Abandoned', home: 'Nantes',     away: 'Toulouse',  hs: 0, as: 0, hL: B+'France - Ligue 1/FC Nantes.webp',            aL: B+'France - Ligue 1/FC Toulouse.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Nice',       away: 'Metz',      hs: 0, as: 0, hL: B+'France - Ligue 1/OGC Nice.webp',             aL: B+'France - Ligue 1/FC Metz.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Lyon',       away: 'Lens',      hs: 0, as: 4, hL: B+'France - Ligue 1/Olympique Lyon.webp',       aL: B+'France - Ligue 1/RC Lens.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Marseille',  away: 'Rennes',    hs: 3, as: 3, hL: B+'France - Ligue 1/Olympique Marseille.webp',  aL: B+'France - Ligue 1/Stade Rennais FC.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Paris FC',   away: 'PSG',       hs: 2, as: 2, hL: B+'France - Ligue 1/Paris FC.webp',             aL: B+'France - Ligue 1/Paris Saint-Germain.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Strasbourg', away: 'AS Monaco', hs: 5, as: 5, hL: B+'France - Ligue 1/RC Strasbourg Alsace.webp', aL: B+'France - Ligue 1/AS Monaco.webp' },
+                    { time: '02:00', status: 'FT',        home: 'Brest',      away: 'Angers',    hs: 1, as: 1, hL: B+'France - Ligue 1/Stade Brestois 29.webp',    aL: B+'France - Ligue 1/Angers SCO.webp' }
+                ]},
+                { name: 'Brasileirão Betano', country: 'Brazil', flag: '🇧🇷', count: 5, matches: [
+                    { time: '02:00', status: 'FT', home: 'Bahia',         away: 'Grêmio',      hs: 1, as: 1, hL: F, aL: F },
+                    { time: '02:00', status: 'FT', home: 'Botafogo',      away: 'Corinthians', hs: 3, as: 3, hL: F, aL: F },
+                    { time: '04:30', status: 'FT', home: 'Chapecoense',   away: 'Remo',        hs: 2, as: 2, hL: F, aL: F },
+                    { time: '04:30', status: 'FT', home: 'RB Bragantino', away: 'Vitória',     hs: 2, as: 2, hL: F, aL: F },
+                    { time: '05:30', status: 'FT', home: 'Athletico',     away: 'Flamengo',    hs: 1, as: 1, hL: F, aL: F }
+                ]},
+                { name: 'Trendyol Süper Lig', country: 'Türkiye', flag: '🇹🇷', count: 4, matches: [
+                    { time: '00:00', status: 'FT', home: 'Antalyaspor', away: 'Kocaelispor',    hs: 1, as: 1, hL: B+'Türkiye - Süper Lig/Antalyaspor.webp',        aL: B+'Türkiye - Süper Lig/Kocaelispor.webp' },
+                    { time: '00:00', status: 'FT', home: 'Fenerbahçe',  away: 'Eyüpspor',       hs: 3, as: 3, hL: B+'Türkiye - Süper Lig/Fenerbahce.webp',        aL: B+'Türkiye - Süper Lig/Eyüpspor.webp' },
+                    { time: '00:00', status: 'FT', home: 'Kasımpaşa',   away: 'Galatasaray',    hs: 1, as: 1, hL: B+'Türkiye - Süper Lig/Kasimpasa.webp',         aL: B+'Türkiye - Süper Lig/Galatasaray.webp' },
+                    { time: '00:00', status: 'FT', home: 'Trabzonspor', away: 'Gençlerbirliği', hs: 0, as: 0, hL: B+'Türkiye - Süper Lig/Trabzonspor.webp',       aL: B+'Türkiye - Süper Lig/Genclerbirligi Ankara.webp' }
+                ]},
+                { name: 'Liga MX, Clausura Playoffs',        country: 'Mexico',  flag: '🇲🇽', count: 1, matches: [
+                    { time: '08:00', status: 'FT', home: 'Pumas',      away: 'Pachuca',   hs: 1, as: 1, hL: F, aL: F }]},
+                { name: 'Mozzart Bet Superliga',              country: 'Serbia',  flag: '🇷🇸', count: 1, matches: [
+                    { time: '01:00', status: 'FT', home: 'OFK Beograd', away: 'Vojvodina', hs: 1, as: 1, hL: F, aL: F }]},
+                { name: 'MLS',                                country: 'USA',     flag: '🇺🇸', count: 2, matches: [
+                    { time: '05:00', status: 'FT', home: 'Inter Miami', away: 'Portland',    hs: 2, as: 2, hL: F, aL: F },
+                    { time: '07:00', status: 'FT', home: 'Nashville',   away: 'Los Angeles', hs: 3, as: 3, hL: F, aL: F }]},
+                { name: 'LaLiga 2',                           country: 'Spain',   flag: '🇪🇸', count: 1, matches: [
+                    { time: '02:15', status: 'FT', home: 'Real Zaragoza', away: 'Sporting', hs: 1, as: 1, hL: F, aL: F }]},
+                { name: 'Brasileirão Série B', country: 'Brazil', flag: '🇧🇷', count: 5, matches: [
+                    { time: '02:00', status: 'FT', home: 'Athletic',  away: 'Juventude',   hs: 1, as: 1, hL: F, aL: F },
+                    { time: '04:00', status: 'FT', home: 'Vila Nova', away: 'Avaí',        hs: 2, as: 2, hL: F, aL: F },
+                    { time: '04:30', status: 'FT', home: 'Ceará',     away: 'Fortaleza',   hs: 2, as: 2, hL: F, aL: F },
+                    { time: '04:30', status: 'FT', home: 'Criciúma',  away: 'Atlético-GO', hs: 1, as: 1, hL: F, aL: F },
+                    { time: '06:30', status: 'FT', home: 'Sport',     away: 'CRB',         hs: 1, as: 1, hL: F, aL: F }]},
+                { name: 'Serie B, Promotion Playoffs', country: 'Italy',   flag: '🇮🇹', count: 1, matches: [] },
+                { name: 'Liga de Primera',             country: 'Chile',   flag: '🇨🇱', count: 3, matches: [] },
+                { name: 'División Profesional',        country: 'Bolivia', flag: '🇧🇴', count: 3, matches: [] }
+            ];
 
             const container = document.getElementById('matches-list');
             if (!container) return;
-            
-            // Clear existing list
-            container.innerHTML = '';
 
             leagues.forEach((league, idx) => {
                 const isOpen = idx < 3;
@@ -4191,7 +3785,7 @@
                 header.innerHTML = `
                     <div class="flex items-center gap-2 flex-1 min-w-0">
                         <span class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors text-base shrink-0">star_outline</span>
-                        <span class="text-base shrink-0">${league.flag || '🏳️'}</span>
+                        <span class="text-base shrink-0">${league.flag}</span>
                         <div class="flex flex-col min-w-0">
                             <span class="text-xs font-bold text-on-surface truncate">${league.name}</span>
                             <span class="text-[10px] text-on-surface-variant">${league.country}</span>
@@ -4205,79 +3799,72 @@
                 const matchesDiv = document.createElement('div');
                 matchesDiv.style.display = isOpen ? 'block' : 'none';
 
-                if (league.matches && league.matches.length > 0) {
-                    league.matches.forEach(m => {
-                        const draw = m.hs === m.as;
-                        const hWin = m.hs > m.as;
-                        const aWin = m.as > m.hs;
-                        const abandoned = m.status === 'Abandoned';
-                        const hSc = abandoned ? 'text-on-surface-variant' : draw ? 'text-on-surface-variant' : hWin ? 'text-green-400 font-extrabold' : 'text-red-400';
-                        const aSc = abandoned ? 'text-on-surface-variant' : draw ? 'text-on-surface-variant' : aWin ? 'text-green-400 font-extrabold' : 'text-red-400';
-                        const hNm = hWin ? 'text-xs font-bold text-on-surface truncate' : 'text-xs text-on-surface-variant truncate';
-                        const aNm = aWin ? 'text-xs font-bold text-on-surface truncate' : 'text-xs text-on-surface-variant truncate';
-                        const stCl = abandoned ? 'text-[10px] font-bold text-error' : 'text-[10px] text-on-surface-variant';
+                league.matches.forEach(m => {
+                    const draw = m.hs === m.as;
+                    const hWin = m.hs > m.as;
+                    const aWin = m.as > m.hs;
+                    const abandoned = m.status === 'Abandoned';
+                    const hSc = abandoned ? 'text-on-surface-variant' : draw ? 'text-on-surface-variant' : hWin ? 'text-green-400 font-extrabold' : 'text-red-400';
+                    const aSc = abandoned ? 'text-on-surface-variant' : draw ? 'text-on-surface-variant' : aWin ? 'text-green-400 font-extrabold' : 'text-red-400';
+                    const hNm = hWin ? 'text-xs font-bold text-on-surface truncate' : 'text-xs text-on-surface-variant truncate';
+                    const aNm = aWin ? 'text-xs font-bold text-on-surface truncate' : 'text-xs text-on-surface-variant truncate';
+                    const stCl = abandoned ? 'text-[10px] font-bold text-error' : 'text-[10px] text-on-surface-variant';
 
-                        const row = document.createElement('div');
-                        row.className = 'flex items-center px-3 py-2 hover:bg-surface-container transition-colors cursor-pointer border-t border-outline-variant/40';
-                        row.innerHTML = `
-                            <div class="flex flex-col items-center w-14 shrink-0 gap-0.5">
-                                <span class="text-[10px] text-on-surface-variant">${m.time}</span>
-                                <span class="${stCl}">${m.status}</span>
-                            </div>
-                            <div class="flex-1 min-w-0 space-y-1 px-2">
-                                <div class="flex items-center justify-between gap-1">
-                                    <div class="flex items-center gap-1.5 min-w-0">
-                                        <img src="${m.hL}" alt="" class="w-5 h-5 object-contain shrink-0" onerror="this.src='${sport.icon}'"/>
-                                        <span class="${hNm}">${m.home}</span>
-                                    </div>
-                                    <span class="text-xs ${hSc} shrink-0 w-4 text-right">${m.hs}</span>
+                    const row = document.createElement('div');
+                    row.className = 'flex items-center px-3 py-2 hover:bg-surface-container transition-colors cursor-pointer border-t border-outline-variant/40';
+                    row.innerHTML = `
+                        <div class="flex flex-col items-center w-14 shrink-0 gap-0.5">
+                            <span class="text-[10px] text-on-surface-variant">${m.time}</span>
+                            <span class="${stCl}">${m.status}</span>
+                        </div>
+                        <div class="flex-1 min-w-0 space-y-1 px-2">
+                            <div class="flex items-center justify-between gap-1">
+                                <div class="flex items-center gap-1.5 min-w-0">
+                                    <img src="${m.hL}" alt="" class="w-5 h-5 object-contain shrink-0" onerror="this.src='assets/icons/Football.webp'"/>
+                                    <span class="${hNm}">${m.home}</span>
                                 </div>
-                                <div class="flex items-center justify-between gap-1">
-                                    <div class="flex items-center gap-1.5 min-w-0">
-                                        <img src="${m.aL}" alt="" class="w-5 h-5 object-contain shrink-0" onerror="this.src='${sport.icon}'"/>
-                                        <span class="${aNm}">${m.away}</span>
-                                    </div>
-                                    <span class="text-xs ${aSc} shrink-0 w-4 text-right">${m.as}</span>
-                                </div>
+                                <span class="text-xs ${hSc} shrink-0 w-4 text-right">${m.hs}</span>
                             </div>
-                            <div class="pl-2 shrink-0">
-                                <span class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors text-base">star_outline</span>
-                            </div>`;
-                        
-                        // Add click listener to match row
-                        row.addEventListener('click', () => {
-                            // Update detail panel (Desktop & Mobile)
-                            updateMatchDetail(m, league);
+                            <div class="flex items-center justify-between gap-1">
+                                <div class="flex items-center gap-1.5 min-w-0">
+                                    <img src="${m.aL}" alt="" class="w-5 h-5 object-contain shrink-0" onerror="this.src='assets/icons/Football.webp'"/>
+                                    <span class="${aNm}">${m.away}</span>
+                                </div>
+                                <span class="text-xs ${aSc} shrink-0 w-4 text-right">${m.as}</span>
+                            </div>
+                        </div>
+                        <div class="pl-2 shrink-0">
+                            <span class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors text-base">star_outline</span>
+                        </div>`;
+                    
+                    // Add click listener to match row
+                    row.addEventListener('click', () => {
+                        // Update detail panel (Desktop & Mobile)
+                        updateMatchDetail(m, league);
 
-                            if (window.innerWidth < 1024) {
-                                const modal = document.getElementById('match-detail-modal');
-                                const modalContent = document.getElementById('modal-content');
-                                const desktopDetail = document.getElementById('desktop-match-detail');
-
-                                if (modal && modalContent && desktopDetail) {
-                                    // Clone desktop detail content to modal after it's been updated
-                                    modalContent.innerHTML = desktopDetail.innerHTML;
-
-                                    // Reset height constraint for modal content
-                                    const scrollContainer = modalContent.querySelector('div');
-                                    if (scrollContainer) {
-                                        scrollContainer.style.height = 'auto';
-                                    }
-
-                                    modal.classList.remove('hidden');
-                                    document.body.style.overflow = 'hidden';
+                        if (window.innerWidth < 1024) {
+                            const modal = document.getElementById('match-detail-modal');
+                            const modalContent = document.getElementById('modal-content');
+                            const desktopDetail = document.getElementById('desktop-match-detail');
+                            
+                            if (modal && modalContent && desktopDetail) {
+                                // Clone desktop detail content to modal after it's been updated
+                                modalContent.innerHTML = desktopDetail.innerHTML;
+                                
+                                // Reset height constraint for modal content
+                                const scrollContainer = modalContent.querySelector('div');
+                                if (scrollContainer) {
+                                    scrollContainer.style.height = 'auto';
                                 }
+                                
+                                modal.classList.remove('hidden');
+                                document.body.style.overflow = 'hidden';
                             }
-                        });
-
-                        matchesDiv.appendChild(row);
+                        }
                     });
-                } else {
-                    const noMatches = document.createElement('div');
-                    noMatches.className = 'px-3 py-4 text-center text-[10px] text-on-surface-variant italic border-t border-outline-variant/40';
-                    noMatches.textContent = 'No matches scheduled for today';
-                    matchesDiv.appendChild(noMatches);
-                }
+
+                    matchesDiv.appendChild(row);
+                });
 
                 header.addEventListener('click', () => {
                     const icon = header.querySelector('.collapse-icon');
@@ -4291,16 +3878,30 @@
                 container.appendChild(section);
             });
 
-            // Set initial detail if available
-            if (leagues.length > 0 && leagues[0].matches && leagues[0].matches.length > 0) {
-                updateMatchDetail(leagues[0].matches[0], leagues[0]);
+            // Set initial detail to Sevilla vs Real Madrid (if available)
+            const laliga = leagues.find(l => l.name === 'LaLiga');
+            if (laliga) {
+                const sevillaMatch = laliga.matches.find(m => m.home === 'Sevilla');
+                if (sevillaMatch) {
+                    updateMatchDetail(sevillaMatch, laliga);
+                }
             }
         }
 
         // Navigation Interactivity
         function initNavigation() {
-            // Active state is now handled by showSport and showTrending
-            console.log('✅ Navigation initialized');
+            const topNavItems = document.querySelectorAll('.nav-item');
+            
+            topNavItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    topNavItems.forEach(i => {
+                        i.classList.remove('nav-item-active', 'text-primary');
+                        i.classList.add('text-on-surface-variant');
+                    });
+                    this.classList.add('nav-item-active');
+                    this.classList.remove('text-on-surface-variant');
+                });
+            });
         }
 
         // Sidebar Navigation Interactivity
@@ -4329,10 +3930,6 @@
                 closeBtn.addEventListener('click', () => {
                     modal.classList.add('hidden');
                     document.body.style.overflow = '';
-                    // Clear last viewed match when explicitly closed
-                    lastViewedMatch = null;
-                    lastViewedLeague = null;
-                    activeViewInSportsTab = 'trending';
                 });
             }
 
@@ -4340,10 +3937,6 @@
                 overlay.addEventListener('click', () => {
                     modal.classList.add('hidden');
                     document.body.style.overflow = '';
-                    // Clear last viewed match when explicitly closed
-                    lastViewedMatch = null;
-                    lastViewedLeague = null;
-                    activeViewInSportsTab = 'trending';
                 });
             }
         }
@@ -4405,20 +3998,6 @@
 
             // Hide initially
             dropdown.style.display = 'none';
-
-            // Add click listeners to items in the more-dropdown
-            const moreLinks = dropdown.querySelectorAll('a');
-            moreLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const sportName = this.querySelector('span').textContent.trim();
-                    if (sportName && sportsData[sportName]) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        showSport(sportName);
-                        dropdown.style.display = 'none';
-                    }
-                });
-            });
 
             // Toggle on click
             moreButton.addEventListener('click', function(e) {
@@ -4503,31 +4082,6 @@
 
                 // Hide initially
                 dropdown.style.display = 'none';
-
-                // Map sportId to sportsData key
-                const sportNameMap = {
-                    'football': 'Football',
-                    'basketball': 'Basketball',
-                    'tennis': 'Tennis',
-                    'icehockey': 'Ice hockey',
-                    'tabletennis': 'Table tennis',
-                    'baseball': 'Baseball',
-                    'handball': 'Handball',
-                    'americanfootball': 'American football',
-                    'volleyball': 'Volleyball',
-                    'darts': 'Darts'
-                };
-
-                // Add click listener to show sport view
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const sportName = sportNameMap[sportId];
-                    if (sportName) {
-                        showSport(sportName);
-                    }
-                    hideAllDropdowns();
-                });
 
                 // Show on hover
                 container.addEventListener('mouseenter', function(e) {
@@ -4629,20 +4183,6 @@
                 }
             }
             
-            // Handle Mobile Sidebar Links
-            const sidebarLinks = sidebar.querySelectorAll('a:not(#mobile-more-button)');
-            sidebarLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const sportName = this.querySelector('.sidebar-text').textContent;
-                    if (sportName && sportsData[sportName]) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        showSport(sportName);
-                        toggleSidebar(false);
-                    }
-                });
-            });
-
             // Toggle mobile menu dropdown instead of sidebar
             toggleBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -4676,6 +4216,7 @@
             }
 
             // Expand sidebar when clicking any icon while collapsed
+            const sidebarLinks = sidebar.querySelectorAll('a, #mobile-more-button');
             sidebarLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     if (!isExpanded) {
@@ -4713,22 +4254,6 @@
             
             // Initial state - ensures texts are hidden via CSS classes
             console.log('✅ Mobile sidebar initialized');
-            
-            // Add click listeners to mobile-more-items links
-            if (mobileMoreItems) {
-                const moreLinks = mobileMoreItems.querySelectorAll('a');
-                moreLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        const sportName = this.querySelector('.sidebar-text').textContent;
-                        if (sportName && sportsData[sportName]) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            showSport(sportName);
-                            toggleSidebar(false);
-                        }
-                    });
-                });
-            }
         }
 
         // Bottom Navigation Functionality
@@ -4760,86 +4285,6 @@
             });
             
             console.log('✅ Bottom navigation initialized');
-        }
-
-        // Custom Scrollbar Functionality
-        const container = document.getElementById('year-selector-container');
-        const track = document.getElementById('custom-scrollbar-track');
-        const thumb = document.getElementById('custom-scrollbar-thumb');
-
-        if (container && track && thumb) {
-            let isDragging = false;
-            let startX;
-            let scrollLeft;
-
-            // Update thumb position based on scroll
-            function updateThumbPosition() {
-                const scrollRatio = container.scrollLeft / (container.scrollWidth - container.clientWidth);
-                const trackWidth = track.clientWidth;
-                const thumbWidth = thumb.clientWidth;
-                const maxThumbPosition = trackWidth - thumbWidth;
-                const thumbPosition = scrollRatio * maxThumbPosition;
-                thumb.style.left = thumbPosition + 'px';
-            }
-
-            // Initial update
-            window.addEventListener('load', updateThumbPosition);
-            container.addEventListener('scroll', updateThumbPosition);
-            window.addEventListener('resize', updateThumbPosition);
-
-            // Drag functionality
-            thumb.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                startX = e.pageX - thumb.offsetLeft;
-                scrollLeft = container.scrollLeft;
-                thumb.classList.add('active:cursor-grabbing');
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                const x = e.pageX - track.getBoundingClientRect().left;
-                const trackWidth = track.clientWidth;
-                const thumbWidth = thumb.clientWidth;
-                const maxThumbPosition = trackWidth - thumbWidth;
-                let thumbPosition = x - startX;
-
-                // Clamp thumb position
-                if (thumbPosition < 0) thumbPosition = 0;
-                if (thumbPosition > maxThumbPosition) thumbPosition = maxThumbPosition;
-
-                thumb.style.left = thumbPosition + 'px';
-
-                // Update scroll position
-                const scrollRatio = thumbPosition / maxThumbPosition;
-                container.scrollLeft = scrollRatio * (container.scrollWidth - container.clientWidth);
-            });
-
-            document.addEventListener('mouseup', () => {
-                isDragging = false;
-                thumb.classList.remove('active:cursor-grabbing');
-            });
-
-            // Track click to jump
-            track.addEventListener('click', (e) => {
-                if (e.target === thumb) return;
-                const x = e.pageX - track.getBoundingClientRect().left;
-                const trackWidth = track.clientWidth;
-                const thumbWidth = thumb.clientWidth;
-                const maxThumbPosition = trackWidth - thumbWidth;
-                const thumbPosition = x - (thumbWidth / 2);
-
-                // Clamp thumb position
-                let clampedPosition = thumbPosition;
-                if (clampedPosition < 0) clampedPosition = 0;
-                if (clampedPosition > maxThumbPosition) clampedPosition = maxThumbPosition;
-
-                thumb.style.left = clampedPosition + 'px';
-
-                // Update scroll position
-                const scrollRatio = clampedPosition / maxThumbPosition;
-                container.scrollLeft = scrollRatio * (container.scrollWidth - container.clientWidth);
-            });
         }
     </script>
 </body>
